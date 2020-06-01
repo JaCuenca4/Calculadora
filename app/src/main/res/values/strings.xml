@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CalculadoraBasica</string>
+    <string name="lblNumber">Ingrese un número</string>
+    <string name="btn_suma">+</string>
+    <string name="btn_resta">-</string>
+    <string name="btn_multiplicacion">x</string>
+    <string name="btn_division">÷</string>
+    <string name="registrar_numero">No se puede dejar campos vacíos</string>
+    <string name="lblResultado">Resultado: </string>
+
 </resources>

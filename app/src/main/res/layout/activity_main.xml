@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="71dp"
             android:ems="10"
-            android:hint="Ingrese un número"
+            android:hint="@string/lblNumber"
             android:inputType="number"
             android:textSize="24sp" />
 
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:ems="10"
-            android:hint="Ingrese un número"
+            android:hint="@string/lblNumber"
             android:inputType="number"
             android:textSize="24sp" />
 
@@ -60,14 +60,14 @@
                     android:id="@+id/btnSumar"
                     android:layout_width="140dp"
                     android:layout_height="100dp"
-                    android:text="+"
+                    android:text="@string/btn_suma"
                     android:textSize="40sp" />
 
                 <Button
                     android:id="@+id/btnRestar"
                     android:layout_width="140dp"
                     android:layout_height="100dp"
-                    android:text="-"
+                    android:text="@string/btn_resta"
                     android:textSize="40sp" />
             </TableRow>
 
@@ -79,14 +79,14 @@
                     android:id="@+id/btnMultiplicar"
                     android:layout_width="140dp"
                     android:layout_height="100dp"
-                    android:text="x"
-                    android:textSize="24sp" />
+                    android:text="@string/btn_multiplicacion"
+                    android:textSize="36sp" />
 
                 <Button
                     android:id="@+id/btnDividir"
                     android:layout_width="140dp"
                     android:layout_height="100dp"
-                    android:text="÷"
+                    android:text="@string/btn_division"
                     android:textSize="40sp" />
 
             </TableRow>
@@ -96,7 +96,8 @@
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="135dp" />
+            android:layout_height="40dp"
+            android:textSize="10sp" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -110,7 +111,7 @@
                     android:id="@+id/lblResultado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Resultado="
+                    android:text="@string/lblResultado"
                     android:textSize="24sp" />
 
                 <EditText
@@ -119,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:textSize="24sp" />
+                    android:textSize="50sp" />
             </TableRow>
 
         </TableLayout>
