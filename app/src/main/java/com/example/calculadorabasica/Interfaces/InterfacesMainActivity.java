@@ -10,7 +10,7 @@ public interface InterfacesMainActivity {
         void operacion_restar(int numero1, int numero2);
         void operacion_multiplicar(int numero1, int numero2);
         void operacion_dividir(int numero1, int numero2);
-        void enviar_resultado (int numero);
+        void enviar_resultado (float numero);
     }
     interface Model{
         void sumar(int numero1,int numero2);

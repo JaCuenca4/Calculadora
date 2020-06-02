@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         presenter =new PresenterMainActivity(this);
     }
 
+    /**
+     * Función que asigna el evento click a los botones
+     * @param v Vista de la app
+     */
     @Override
     public void onClick(View v) {
         String number_a= txtNumero1.getText().toString(), number_b=txtNumero2.getText().toString();
@@ -62,6 +66,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int parseNumber(String number){
         return Integer.parseInt((number));
     }
+
+    /**
+     * Función void que asigna a cada elemento del layout su respectiva instancia
+     */
     @Override
     public void findElement() {
         txtNumero1=findViewById(R.id.txtNum1);
