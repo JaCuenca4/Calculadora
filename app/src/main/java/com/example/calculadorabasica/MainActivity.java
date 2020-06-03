@@ -12,6 +12,9 @@ import android.widget.Toast;
 import com.example.calculadorabasica.Interfaces.InterfacesMainActivity;
 import com.example.calculadorabasica.Presenter.PresenterMainActivity;
 
+/**
+ * Clase encargada de manejear los elementos de la vista
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, InterfacesMainActivity.View {
     //Atributos
     EditText txtNumero1, txtNumero2;

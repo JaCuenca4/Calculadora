@@ -3,6 +3,9 @@ package com.example.calculadorabasica.Model;
 import com.example.calculadorabasica.Interfaces.InterfacesMainActivity;
 import com.example.calculadorabasica.Presenter.PresenterMainActivity;
 
+/**
+ * Clase destinada para la funcionalidad de la app
+ */
 public class ModelMainActivity implements InterfacesMainActivity.Model {
     InterfacesMainActivity.Presenter presenter;
     public ModelMainActivity(InterfacesMainActivity.Presenter presenter) {

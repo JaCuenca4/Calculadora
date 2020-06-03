@@ -4,6 +4,9 @@ import com.example.calculadorabasica.Interfaces.InterfacesMainActivity;
 import com.example.calculadorabasica.MainActivity;
 import com.example.calculadorabasica.Model.ModelMainActivity;
 
+/**
+ * Clase que opera de intermediario entre el modelo y la vista
+ */
 public class PresenterMainActivity implements InterfacesMainActivity.Presenter {
     InterfacesMainActivity.View view;
     InterfacesMainActivity.Model model;
