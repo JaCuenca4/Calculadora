@@ -58,17 +58,25 @@
 
                 <Button
                     android:id="@+id/btnSumar"
-                    android:layout_width="140dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:text="@string/btn_suma"
                     android:textSize="40sp" />
 
                 <Button
                     android:id="@+id/btnRestar"
-                    android:layout_width="140dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:text="@string/btn_resta"
                     android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/btnMmas"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="M+"
+                    android:textSize="40sp" />
+
             </TableRow>
 
             <TableRow
@@ -77,16 +85,23 @@
 
                 <Button
                     android:id="@+id/btnMultiplicar"
-                    android:layout_width="140dp"
+                    android:layout_width="100"
                     android:layout_height="100dp"
                     android:text="@string/btn_multiplicacion"
                     android:textSize="36sp" />
 
                 <Button
                     android:id="@+id/btnDividir"
-                    android:layout_width="140dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:text="@string/btn_division"
+                    android:textSize="40sp" />
+
+                <Button
+                    android:id="@+id/btnMmenos"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="M-"
                     android:textSize="40sp" />
 
             </TableRow>
