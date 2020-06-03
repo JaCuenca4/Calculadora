@@ -7,8 +7,8 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="376dp"
-        android:layout_height="688dp"
+        android:layout_width="414dp"
+        android:layout_height="695dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,8 +46,43 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <TableRow
+            android:layout_width="400dp"
+            android:layout_height="101dp"
+            android:gravity="center|center_vertical">
+
+            <Button
+                android:id="@+id/btnMmas"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="M+"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnMmenos"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="M-"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnM"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="M"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnMS"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="MS"
+                android:textSize="40sp" />
+
+        </TableRow>
+
         <TableLayout
-            android:layout_width="wrap_content"
+            android:layout_width="202dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|center_horizontal|center_vertical"
             android:gravity="center|center_horizontal|center_vertical">
@@ -70,13 +105,6 @@
                     android:text="@string/btn_resta"
                     android:textSize="40sp" />
 
-                <Button
-                    android:id="@+id/btnMmas"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="M+"
-                    android:textSize="40sp" />
-
             </TableRow>
 
             <TableRow
@@ -85,7 +113,7 @@
 
                 <Button
                     android:id="@+id/btnMultiplicar"
-                    android:layout_width="100"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:text="@string/btn_multiplicacion"
                     android:textSize="36sp" />
@@ -95,13 +123,6 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:text="@string/btn_division"
-                    android:textSize="40sp" />
-
-                <Button
-                    android:id="@+id/btnMmenos"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="M-"
                     android:textSize="40sp" />
 
             </TableRow>
