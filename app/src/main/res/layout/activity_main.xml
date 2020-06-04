@@ -26,19 +26,19 @@
         <EditText
             android:id="@+id/txtNum1"
             android:layout_width="match_parent"
-            android:layout_height="71dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/lblNumber"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:textSize="24sp" />
 
         <EditText
             android:id="@+id/txtNum2"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/lblNumber"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:textSize="24sp" />
 
         <TextView

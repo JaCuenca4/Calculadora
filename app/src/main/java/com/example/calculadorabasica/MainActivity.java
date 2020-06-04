@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         String number_a= txtNumero1.getText().toString(), number_b=txtNumero2.getText().toString();
         if (stepsValidation(number_a) & stepsValidation(number_b)){
-            int first_number = parseNumber(number_a);
-            int second_number = parseNumber(number_b);
+            Float first_number = parseNumber(number_a);
+            Float second_number = parseNumber(number_b);
             switch (v.getId()) {
                 case R.id.btnSumar:
                     presenter.operacionSumar(first_number, second_number);
@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean stepsValidation(String number){
         return !number.equals("");
     }
-    private int parseNumber(String number){
-        return Integer.parseInt((number));
+    private Float parseNumber(String number){
+        return Float.parseFloat(number);
     }
 
     /**
