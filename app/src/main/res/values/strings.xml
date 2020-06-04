@@ -6,6 +6,6 @@
     <string name="btn_multiplicacion">x</string>
     <string name="btn_division">÷</string>
     <string name="registrar_numero">No se puede dejar campos vacíos</string>
-    <string name="lblResultado">Resultado: </string>
+    <string name="lblResultado">Resultado</string>
 
 </resources>

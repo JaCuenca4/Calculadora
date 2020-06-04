@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="414dp"
-        android:layout_height="695dp"
+        android:layout_width="388dp"
+        android:layout_height="694dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,10 +21,10 @@
         app:layout_constraintVertical_bias="0.488">
 
         <TextView
-            android:id="@+id/lbl1"
+            android:id="@+id/lblSpace"
             android:layout_width="match_parent"
-            android:layout_height="82dp"
-            android:textSize="36sp" />
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/txtNum1"
@@ -53,36 +56,36 @@
 
             <Button
                 android:id="@+id/btnMmas"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="M+"
-                android:textSize="40sp" />
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/btnMmenos"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="M-"
-                android:textSize="40sp" />
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/btnM"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="M"
-                android:textSize="40sp" />
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/btnMS"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="MS"
-                android:textSize="40sp" />
+                android:textSize="36sp" />
 
         </TableRow>
 
         <TableLayout
-            android:layout_width="202dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|center_horizontal|center_vertical"
             android:gravity="center|center_horizontal|center_vertical">
@@ -93,17 +96,17 @@
 
                 <Button
                     android:id="@+id/btnSumar"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:text="@string/btn_suma"
-                    android:textSize="40sp" />
+                    android:textSize="36sp" />
 
                 <Button
                     android:id="@+id/btnRestar"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:text="@string/btn_resta"
-                    android:textSize="40sp" />
+                    android:textSize="36sp" />
 
             </TableRow>
 
@@ -113,53 +116,60 @@
 
                 <Button
                     android:id="@+id/btnMultiplicar"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:text="@string/btn_multiplicacion"
                     android:textSize="36sp" />
 
                 <Button
                     android:id="@+id/btnDividir"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:text="@string/btn_division"
-                    android:textSize="40sp" />
+                    android:textSize="36sp" />
 
             </TableRow>
 
         </TableLayout>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/lblDos"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:textSize="10sp" />
+            android:layout_height="wrap_content" />
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="100dp">
 
                 <TextView
-                    android:id="@+id/lblResultado"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/lblIgual"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/lblResultado"
-                    android:textSize="24sp" />
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:text="="
+                    android:textSize="30sp" />
 
-                <EditText
-                    android:id="@+id/txtResultado"
-                    android:layout_width="232dp"
+                <TextView
+                    android:id="@+id/lblResultado"
+                    android:layout_width="237dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:textSize="50sp" />
+                    android:textSize="30sp" />
+
             </TableRow>
 
         </TableLayout>
 
+        <TextView
+            android:id="@+id/txtMemoria"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_vertical"
+            android:textSize="30sp" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
