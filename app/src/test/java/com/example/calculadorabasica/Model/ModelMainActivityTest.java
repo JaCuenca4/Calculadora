@@ -1,9 +1,5 @@
 package com.example.calculadorabasica.Model;
 
-import com.example.calculadorabasica.Interfaces.InterfacesMainActivity;
-import com.example.calculadorabasica.MainActivity;
-import com.example.calculadorabasica.Presenter.PresenterMainActivity;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,21 +18,21 @@ public class ModelMainActivityTest {
 
     @Test
     public void sumar() {
-        assertEquals(8.0 ,model.sumart(4,4),0.0);
+        assertEquals(8.0 ,model.mSumar(4f,4f),0.0);
     }
 
     @Test
     public void restar() {
-        assertEquals(2,model.restart(6,4),0.0);
+        assertEquals(2,model.mRestar(6f,4f),0.0);
     }
 
     @Test
     public void multiplicar() {
-        assertEquals(4,model.multiplicart(2,2),0.0);
+        assertEquals(4,model.mMultiplicar(2f,2f),0.0);
     }
 
     @Test
     public void dividir() {
-        assertEquals(2,model.dividirt(4,2),0.0);
+        assertEquals(2,model.mDividir(4f,2f),0.0);
     }
 }

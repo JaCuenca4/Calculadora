@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Atributos
     EditText txtNumero1, txtNumero2;
     Button btnSuma, btnResta,btnMultiplicacion,btnDivision;
+    Button btnM, btnMmas,btnMmenos, btnMS;
     TextView lblResul;
     InterfacesMainActivity.Presenter presenter;
 
@@ -42,16 +43,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             int second_number = parseNumber(number_b);
             switch (v.getId()) {
                 case R.id.btnSumar:
-                    presenter.operacion_sumar(first_number, second_number);
+                    presenter.operacionSumar(first_number, second_number);
                     break;
                 case R.id.btnRestar:
-                    presenter.operacion_restar(first_number, second_number);
+                    presenter.operacionRestar(first_number, second_number);
                     break;
                 case R.id.btnMultiplicar:
-                    presenter.operacion_multiplicar(first_number, second_number);
+                    presenter.operacionMultiplicar(first_number, second_number);
                     break;
                 case R.id.btnDividir:
-                    presenter.operacion_dividir(first_number, second_number);
+                    presenter.operacionDividir(first_number, second_number);
+                    break;
+                case R.id.btnM:
+                    presenter.guardarMemoria(lblResul.getText().toString());
+                    break;
+                case R.id.btnMmas:
+                case R.id.btnMmenos:
+                case R.id.btnMS:
+                    presenter.borrarMemoria();
                     break;
                 case R.id.lblResultado:
                     String label_result = lblResul.getText().toString();
@@ -87,6 +96,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMultiplicacion.setOnClickListener(this);
         btnDivision=findViewById(R.id.btnDividir);
         btnDivision.setOnClickListener(this);
+        btnM= findViewById(R.id.btnM);
+        btnM.setOnClickListener(this);
+        btnMmas = findViewById(R.id.btnMmas);
+        btnMmas.setOnClickListener(this);
+        btnMmenos = findViewById(R.id.btnMmenos);
+        btnMmenos.setOnClickListener(this);
+        btnMS = findViewById(R.id.btnMS);
+        btnMS.setOnClickListener(this);
     }
 
     @Override

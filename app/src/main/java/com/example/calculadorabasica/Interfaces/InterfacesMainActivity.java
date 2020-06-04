@@ -5,8 +5,6 @@ package com.example.calculadorabasica.Interfaces;
  * de acuerdo con la su funcionalidad, esta puede ser de tipo View, Model o Presenter
  */
 public interface InterfacesMainActivity {
-
-
     /**
      * Interfaz para las vistas
      */
@@ -15,27 +13,29 @@ public interface InterfacesMainActivity {
         void showResult(String result);
     }
 
-
     /**
      * Interfaz para los presenters
      */
     interface Presenter{
-        void operacion_sumar(int numero1, int numero2);
-        void operacion_restar(int numero1, int numero2);
-        void operacion_multiplicar(int numero1, int numero2);
-        void operacion_dividir(int numero1, int numero2);
-        void enviar_resultado (float numero);
+        void operacionSumar(float numero1, float numero2);
+        void operacionRestar(float numero1, float numero2);
+        void operacionMultiplicar(float numero1, float numero2);
+        void operacionDividir(float numero1, float numero2);
+        void guardarMemoria(String numero);
+        void borrarMemoria();
+        void enviarResultado(String result);
     }
-
 
     /**
      * Interfaz para los modelos
      */
     interface Model{
-        void sumar(int numero1,int numero2);
-        void restar(int numero1,int numero2);
-        void multiplicar(int numero1,int numero2);
-        void dividir(int numero1,int numero2);
+        void sumar(float numero1,float numero2);
+        void restar(float numero1,float numero2);
+        void multiplicar(float numero1,float numero2);
+        void dividir(float numero1,float numero2);
+        void guardarMemoria(String num);
+        void borrarMemoria();
 
     }
 }
