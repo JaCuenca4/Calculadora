@@ -24,7 +24,7 @@
             android:id="@+id/lblSpace"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp" />
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/txtNum1"
@@ -163,12 +163,24 @@
 
         </TableLayout>
 
-        <TextView
-            android:id="@+id/txtMemoria"
-            android:layout_width="193dp"
-            android:layout_height="wrap_content"
-            android:gravity="center|center_vertical"
-            android:textSize="30sp" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Memoria= "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblMemoria"
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="24sp" />
+        </TableRow>
 
     </LinearLayout>
 

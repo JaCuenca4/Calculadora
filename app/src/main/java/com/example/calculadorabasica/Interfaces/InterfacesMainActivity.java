@@ -11,6 +11,7 @@ public interface InterfacesMainActivity {
     interface View{
         void findElement();
         void showResult(String result);
+        void showResultMemory(String result);
     }
 
     /**
@@ -22,8 +23,12 @@ public interface InterfacesMainActivity {
         void operacionMultiplicar(float numero1, float numero2);
         void operacionDividir(float numero1, float numero2);
         void guardarMemoria(String numero);
-        void borrarMemoria();
+        void mostrarMemoria();
         void enviarResultado(String result);
+        void enviarResultadoMemoria(String result);
+        void operacionSumarMemoria(String result);
+        void operacionRestarMemoria(String result);
+
     }
 
     /**
@@ -35,7 +40,9 @@ public interface InterfacesMainActivity {
         void multiplicar(float numero1,float numero2);
         void dividir(float numero1,float numero2);
         void guardarMemoria(String num);
-        void borrarMemoria();
+        void mostrarMemoria();
+        void sumarMemoria(String num);
+        void restarMemoria(String num);
 
     }
 }

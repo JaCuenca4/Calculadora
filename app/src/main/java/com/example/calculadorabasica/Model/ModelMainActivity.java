@@ -132,22 +132,47 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
     public void guardarMemoria(String num) {
         try{
             memoria = Float.parseFloat(num);
-            this.presenter.enviarResultado("Guardado en memoria");
+            this.presenter.enviarResultadoMemoria("Guardado en memoria");
         }catch (Exception e){
-            this.presenter.enviarResultado("Error al guardar en memoria");
+            this.presenter.enviarResultadoMemoria("Error al guardar en memoria");
         }
     }
 
     /**
-     * Funcion para limpiar la memoria
+     * Funcion para mostrar la memoria
      */
     @Override
-    public void borrarMemoria() {
+    public void mostrarMemoria() {
         try{
-            memoria = 0.0f;
-            this.presenter.enviarResultado("Memoria borrada");
+            this.presenter.enviarResultadoMemoria(String.valueOf(memoria));
         }catch (Exception e){
-            this.presenter.enviarResultado("Error al limpiar memoria");
+            this.presenter.enviarResultadoMemoria("Error al mostrar en memoria");
+        }
+    }
+    /**
+     * Funcion para sumar un numero a la memoria
+     * @param num numero que se va a sumar
+     */
+    @Override
+    public void sumarMemoria(String num) {
+        try{
+            memoria += Float.parseFloat(num);
+            this.presenter.enviarResultadoMemoria(String.valueOf(memoria));
+        }catch (Exception e){
+            this.presenter.enviarResultadoMemoria("Error al sumar en memoria");
+        }
+    }
+    /**
+     * Funcion para restar un numero a la memoria
+     * @param num numero que se va a restar
+     */
+    @Override
+    public void restarMemoria(String num) {
+        try{
+            memoria -= Float.parseFloat(num);
+            this.presenter.enviarResultadoMemoria(String.valueOf(memoria));
+        }catch (Exception e){
+            this.presenter.enviarResultadoMemoria("Error al restar en memoria");
         }
     }
 }

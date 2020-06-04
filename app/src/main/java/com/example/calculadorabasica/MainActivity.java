@@ -16,11 +16,50 @@ import com.example.calculadorabasica.Presenter.PresenterMainActivity;
  * Clase encargada de manejear los elementos de la vista
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, InterfacesMainActivity.View {
-    //Atributos
-    EditText txtNumero1, txtNumero2;
-    Button btnSuma, btnResta,btnMultiplicacion,btnDivision;
-    Button btnM, btnMmas,btnMmenos, btnMS;
-    TextView lblResul;
+    /**
+     * The Txt numero 1.
+     */
+//Atributos
+    EditText txtNumero1, /**
+     * The Txt numero 2.
+     */
+    txtNumero2;
+    /**
+     * The Btn suma.
+     */
+    Button btnSuma, /**
+     * The Btn resta.
+     */
+    btnResta, /**
+     * The Btn multiplicacion.
+     */
+    btnMultiplicacion, /**
+     * The Btn division.
+     */
+    btnDivision;
+    /**
+     * The Btn m.
+     */
+    Button btnM, /**
+     * The Btn mmas.
+     */
+    btnMmas, /**
+     * The Btn mmenos.
+     */
+    btnMmenos, /**
+     * The Btn ms.
+     */
+    btnMS;
+    /**
+     * The Lbl resul.
+     */
+    TextView lblResul, /**
+     * The Lbl memoria.
+     */
+    lblMemoria;
+    /**
+     * The Presenter.
+     */
     InterfacesMainActivity.Presenter presenter;
 
     @Override
@@ -55,12 +94,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     presenter.operacionDividir(first_number, second_number);
                     break;
                 case R.id.btnM:
-                    presenter.guardarMemoria(lblResul.getText().toString());
+                    presenter.mostrarMemoria();
                     break;
                 case R.id.btnMmas:
+                    presenter.operacionSumarMemoria(lblResul.getText().toString());
+                    break;
                 case R.id.btnMmenos:
+                    presenter.operacionRestarMemoria(lblResul.getText().toString());
+                    break;
                 case R.id.btnMS:
-                    presenter.borrarMemoria();
+                    presenter.guardarMemoria(lblResul.getText().toString());
                     break;
                 case R.id.lblResultado:
                     String label_result = lblResul.getText().toString();
@@ -88,6 +131,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtNumero2=findViewById(R.id.txtNum2);
         lblResul= findViewById(R.id.lblResultado);
         lblResul.setOnClickListener(this);
+        lblMemoria= findViewById(R.id.lblMemoria);
+        lblMemoria.setOnClickListener(this);
         btnSuma=findViewById(R.id.btnSumar);
         btnSuma.setOnClickListener(this);
         btnResta=findViewById(R.id.btnRestar);
@@ -109,5 +154,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void showResult(String result) {
         lblResul.setText(result);
+    }
+
+    @Override
+    public void showResultMemory(String result) {
+        lblMemoria.setText(result);
     }
 }
