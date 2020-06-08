@@ -19,91 +19,38 @@ public class PresenterMainActivity implements InterfacesMainActivity.Presenter {
         this.model=new ModelMainActivity(this);
     }
 
-    /**
-     * Funcion encargada de solicitar la suma al modelo
-     * @param numero1 numero flotante
-     * @param numero2 numero flotante
-     */
     @Override
-    public void operacionSumar(float numero1, float numero2) {
-        this.model.sumar(numero1, numero2);
+    public void calcular(String operacion) {
+        model.calcular(operacion);
     }
 
-    /**
-     * Funcion encargada de solicitar la resta al modelo
-     * @param numero1 numero flotante
-     * @param numero2 numero flotante
-     */
     @Override
-    public void operacionRestar(float numero1, float numero2) {
-        this.model.restar(numero1, numero2);
+    public void factorial(String operacion) {
+        model.factorial(operacion);
     }
 
-    /**
-     * Funcion encargada de solicitar la multiplicacion al modelo
-     * @param numero1 numero flotante
-     * @param numero2 numero flotante
-     */
     @Override
-    public void operacionMultiplicar(float numero1, float numero2) {
-        this.model.multiplicar(numero1, numero2);
+    public void limparMemoria() {
+
     }
 
-    /**
-     * Funcion encargada de solcitar la division al modelo
-     * @param numero1 numero flotante
-     * @param numero2 numero flotante
-     */
     @Override
-    public void operacionDividir(float numero1, float numero2) {
-        this.model.dividir(numero1, numero2);
+    public void sumarMemoria() {
+
     }
-    /**
-     * Funcion encargada de guardar en memoria
-     * @param numero String
-     */
+
     @Override
-    public void guardarMemoria(String numero) {
-        model.guardarMemoria(numero);
+    public void restarMemoria() {
+
     }
-    /**
-     * Funcion encargada de mostrar el numero en memoria
-     */
+
     @Override
-    public void mostrarMemoria() {
-        model.mostrarMemoria();
+    public void recuperarMemoria() {
+
     }
-    /**
-     * Funcion encargada de sumar numeros en memoria
-     * @param numero String
-     */
-    @Override
-    public void operacionSumarMemoria(String numero) {
-        model.sumarMemoria(numero);
-    }
-    /**
-     * Funcion encargada de restar numeros en memoria
-     * @param numero String
-     */
-    @Override
-    public void operacionRestarMemoria(String numero) {
-        model.restarMemoria(numero);
-    }
-    /**
-     * Funcion encargada de enviar el resultado al View
-     * @param result String
-     */
+
     @Override
     public void enviarResultado(String result) {
-        this.view.showResult(result);
-    }
-
-    /**
-     * Funcion encargada de enviar el resultado de memoria al View
-     * @param result String
-     */
-    @Override
-    public void enviarResultadoMemoria(String result) {
-        this.view.showResultMemory(result);
+        view.showResult(result);
     }
 }

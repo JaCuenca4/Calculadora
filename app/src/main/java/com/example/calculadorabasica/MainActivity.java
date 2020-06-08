@@ -16,50 +16,39 @@ import com.example.calculadorabasica.Presenter.PresenterMainActivity;
  * Clase encargada de manejear los elementos de la vista
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, InterfacesMainActivity.View {
-    /**
-     * The Txt numero 1.
-     */
-//Atributos
-    EditText txtNumero1, /**
-     * The Txt numero 2.
-     */
-    txtNumero2;
-    /**
-     * The Btn suma.
-     */
-    Button btnSuma, /**
-     * The Btn resta.
-     */
-    btnResta, /**
-     * The Btn multiplicacion.
-     */
-    btnMultiplicacion, /**
-     * The Btn division.
-     */
-    btnDivision;
-    /**
-     * The Btn m.
-     */
-    Button btnM, /**
-     * The Btn mmas.
-     */
-    btnMmas, /**
-     * The Btn mmenos.
-     */
-    btnMmenos, /**
-     * The Btn ms.
-     */
-    btnMS;
-    /**
-     * The Lbl resul.
-     */
-    TextView lblResul, /**
-     * The Lbl memoria.
-     */
-    lblMemoria;
-    /**
-     * The Presenter.
-     */
+    //Atributos
+    TextView txtMemoria;
+    TextView txtOperacion;
+    TextView txtResultado;
+    Button btnMc;
+    Button btnMmas;
+    Button btnMmenos;
+    Button btnMr;
+    Button btnCuadrado;
+    Button btnCubo;
+    Button btnPotencia;
+    Button btnFact;
+    Button btnParentesisA;
+    Button btnParentesisC;
+    Button btnC;
+    Button btnDel;
+    Button btn0;
+    Button btn1;
+    Button btn2;
+    Button btn3;
+    Button btn4;
+    Button btn5;
+    Button btn6;
+    Button btn7;
+    Button btn8;
+    Button btn9;
+    Button btnPunto;
+    Button btnIgual;
+    Button btnResta;
+    Button btnSuma;
+    Button btnMultiplica;
+    Button btnDivision;
+
     InterfacesMainActivity.Presenter presenter;
 
     @Override
@@ -67,59 +56,102 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.findElement();
-        presenter =new PresenterMainActivity(this);
+        presenter = new PresenterMainActivity(this);
     }
 
     /**
      * Función que asigna el evento click a los botones
+     *
      * @param v Vista de la app
      */
     @Override
     public void onClick(View v) {
-        String number_a= txtNumero1.getText().toString(), number_b=txtNumero2.getText().toString();
-        if (stepsValidation(number_a) & stepsValidation(number_b)){
-            Float first_number = parseNumber(number_a);
-            Float second_number = parseNumber(number_b);
-            switch (v.getId()) {
-                case R.id.btnSumar:
-                    presenter.operacionSumar(first_number, second_number);
-                    break;
-                case R.id.btnRestar:
-                    presenter.operacionRestar(first_number, second_number);
-                    break;
-                case R.id.btnMultiplicar:
-                    presenter.operacionMultiplicar(first_number, second_number);
-                    break;
-                case R.id.btnDividir:
-                    presenter.operacionDividir(first_number, second_number);
-                    break;
-                case R.id.btnM:
-                    presenter.mostrarMemoria();
-                    break;
-                case R.id.btnMmas:
-                    presenter.operacionSumarMemoria(lblResul.getText().toString());
-                    break;
-                case R.id.btnMmenos:
-                    presenter.operacionRestarMemoria(lblResul.getText().toString());
-                    break;
-                case R.id.btnMS:
-                    presenter.guardarMemoria(lblResul.getText().toString());
-                    break;
-                case R.id.lblResultado:
-                    String label_result = lblResul.getText().toString();
-                    txtNumero1.setText(label_result);
-                    break;
+        String operacion = "";
+        switch (v.getId()) {
+            case R.id.btnMc:
+                break;
+            case R.id.btnMmas:
+                break;
+            case R.id.btnMmenos:
+                break;
+            case R.id.btnMr:
+                break;
+            case R.id.btnCuadrado:
+                operacion += "^2";
+                break;
+            case R.id.btnCubo:
+                operacion += "^3";
+                break;
+            case R.id.btnPotencia:
+                operacion += "^";
+                break;
+            case R.id.btnFact:
+                presenter.factorial(operacion);
+                break;
+            case R.id.btnParentesisA:
+                operacion += "(";
+                break;
+            case R.id.btnParentesisC:
+                operacion += ")";
+                break;
+            case R.id.btnC:
+                if(!operacion.isEmpty()) {
+                    operacion += operacion.substring(0, operacion.length() - 1);
                 }
-        }else{
-                Toast.makeText(getApplicationContext(),R.string.registrar_numero, Toast.LENGTH_LONG).show();
+                break;
+            case R.id.btnDel:
+                operacion = "";
+                break;
+            case R.id.btnResta:
+                operacion += "-";
+                break;
+            case R.id.btnSuma:
+                operacion += "+";
+                break;
+            case R.id.btnMultiplica:
+                operacion += "x";
+                break;
+            case R.id.btnDivision:
+                operacion += "÷";
+                break;
+            case R.id.btnIgual:
+                presenter.calcular(operacion);
+                break;
+            case R.id.btnPunto:
+                operacion += ".";
+                break;
+            case R.id.btn0:
+                operacion += "0";
+                break;
+            case R.id.btn1:
+                operacion += "1";
+                break;
+            case R.id.btn2:
+                operacion += "2";
+                break;
+            case R.id.btn3:
+                operacion += "3";
+                break;
+            case R.id.btn4:
+                operacion += "4";
+                break;
+            case R.id.btn5:
+                operacion += "5";
+                break;
+            case R.id.btn6:
+                operacion += "6";
+                break;
+            case R.id.btn7:
+                operacion += "7";
+                break;
+            case R.id.btn8:
+                operacion += "8";
+                break;
+            case R.id.btn9:
+                operacion += "9";
+                break;
         }
-    }
-
-    private boolean stepsValidation(String number){
-        return !number.equals("");
-    }
-    private Float parseNumber(String number){
-        return Float.parseFloat(number);
+        txtResultado.setText(operacion);
     }
 
     /**
@@ -127,37 +159,73 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     @Override
     public void findElement() {
-        txtNumero1=findViewById(R.id.txtNum1);
-        txtNumero2=findViewById(R.id.txtNum2);
-        lblResul= findViewById(R.id.lblResultado);
-        lblResul.setOnClickListener(this);
-        lblMemoria= findViewById(R.id.lblMemoria);
-        lblMemoria.setOnClickListener(this);
-        btnSuma=findViewById(R.id.btnSumar);
-        btnSuma.setOnClickListener(this);
-        btnResta=findViewById(R.id.btnRestar);
-        btnResta.setOnClickListener(this);
-        btnMultiplicacion=findViewById(R.id.btnMultiplicar);
-        btnMultiplicacion.setOnClickListener(this);
-        btnDivision=findViewById(R.id.btnDividir);
-        btnDivision.setOnClickListener(this);
-        btnM= findViewById(R.id.btnM);
-        btnM.setOnClickListener(this);
+        txtMemoria = findViewById(R.id.txtMemoria);
+        txtOperacion = findViewById(R.id.txtOperacion);
+        txtResultado = findViewById(R.id.txtResultado);
+        btnMc = findViewById(R.id.btnMc);
         btnMmas = findViewById(R.id.btnMmas);
-        btnMmas.setOnClickListener(this);
         btnMmenos = findViewById(R.id.btnMmenos);
+        btnMr = findViewById(R.id.btnMr);
+        btnCuadrado = findViewById(R.id.btnCuadrado);
+        btnCubo = findViewById(R.id.btnCubo);
+        btnPotencia = findViewById(R.id.btnPotencia);
+        btnFact = findViewById(R.id.btnFact);
+        btnParentesisA = findViewById(R.id.btnParentesisA);
+        btnParentesisC = findViewById(R.id.btnParentesisC);
+        btnC = findViewById(R.id.btnC);
+        btnDel = findViewById(R.id.btnDel);
+        btnResta = findViewById(R.id.btnResta);
+        btnSuma = findViewById(R.id.btnSuma);
+        btnMultiplica = findViewById(R.id.btnMultiplica);
+        btnDivision = findViewById(R.id.btnDivision);
+        btnIgual = findViewById(R.id.btnIgual);
+        btnPunto = findViewById(R.id.btnPunto);
+        btn0 = findViewById(R.id.btn0);
+        btn1 = findViewById(R.id.btn1);
+        btn2 = findViewById(R.id.btn2);
+        btn3 = findViewById(R.id.btn3);
+        btn4 = findViewById(R.id.btn4);
+        btn5 = findViewById(R.id.btn5);
+        btn6 = findViewById(R.id.btn6);
+        btn7 = findViewById(R.id.btn7);
+        btn8 = findViewById(R.id.btn8);
+        btn9 = findViewById(R.id.btn9);
+        btnMc.setOnClickListener(this);
+        btnMmas.setOnClickListener(this);
         btnMmenos.setOnClickListener(this);
-        btnMS = findViewById(R.id.btnMS);
-        btnMS.setOnClickListener(this);
+        btnMr.setOnClickListener(this);
+        btnCuadrado.setOnClickListener(this);
+        btnCubo.setOnClickListener(this);
+        btnPotencia.setOnClickListener(this);
+        btnFact.setOnClickListener(this);
+        btnParentesisA.setOnClickListener(this);
+        btnParentesisC.setOnClickListener(this);
+        btnC.setOnClickListener(this);
+        btnDel.setOnClickListener(this);
+        btnResta.setOnClickListener(this);
+        btnSuma.setOnClickListener(this);
+        btnMultiplica.setOnClickListener(this);
+        btnDivision.setOnClickListener(this);
+        btnIgual.setOnClickListener(this);
+        btnPunto.setOnClickListener(this);
+        btn0.setOnClickListener(this);
+        btn1.setOnClickListener(this);
+        btn2.setOnClickListener(this);
+        btn3.setOnClickListener(this);
+        btn4.setOnClickListener(this);
+        btn5.setOnClickListener(this);
+        btn5.setOnClickListener(this);
+        btn6.setOnClickListener(this);
+        btn7.setOnClickListener(this);
+        btn8.setOnClickListener(this);
+        btn9.setOnClickListener(this);
     }
 
     @Override
     public void showResult(String result) {
-        lblResul.setText(result);
     }
 
     @Override
-    public void showResultMemory(String result) {
-        lblMemoria.setText(result);
+    public void showMemory(String result) {
     }
 }

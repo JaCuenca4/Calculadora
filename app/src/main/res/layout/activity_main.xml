@@ -1,187 +1,299 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_centerInParent="true"
-    android:layout_centerHorizontal="true"
-    android:layout_centerVertical="true"
-    tools:context=".MainActivity">
+    android:columnCount="4"
+    android:rowCount="10"
+    android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="388dp"
-        android:layout_height="694dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.488">
+    <TextView
+        android:id="@+id/txtMemoria"
+        android:layout_columnSpan="4"
+        android:text="M"
+        android:textSize="30dp"
+        android:textAlignment="textEnd"
+        android:layout_width="match_parent"
+        android:layout_gravity="end"
+        android:paddingRight="10dp"
+        />
 
-        <TextView
-            android:id="@+id/lblSpace"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp" />
+    <TextView
+        android:id="@+id/txtOperacion"
+        android:layout_width="match_parent"
+        android:layout_columnSpan="4"
+        android:layout_gravity="end"
+        android:paddingRight="10dp"
+        android:text="2+25+4"
+        android:textAlignment="textEnd"
+        android:textSize="55dp"
+        android:layout_marginBottom="9dp"
+        />
 
-        <EditText
-            android:id="@+id/txtNum1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/lblNumber"
-            android:inputType="numberDecimal"
-            android:textSize="24sp" />
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_columnSpan="4"
+        android:layout_gravity="end"
+        android:paddingRight="10dp"
+        android:text="31"
+        android:textAlignment="textEnd"
+        android:layout_marginBottom="2dp"
+        android:textSize="35dp" />
 
-        <EditText
-            android:id="@+id/txtNum2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/lblNumber"
-            android:inputType="numberDecimal"
-            android:textSize="24sp" />
+    <Button
+        android:id="@+id/btnMc"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="MC"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnMmas"
+        android:layout_height="80dp"
+        android:layout_row="0"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="M+"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-        <TableRow
-            android:layout_width="400dp"
-            android:layout_height="101dp"
-            android:gravity="center|center_vertical">
+    <Button
+        android:id="@+id/btnMmenos"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="M-"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/btnMmas"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:text="M+"
-                android:textSize="36sp" />
+    <Button
+        android:id="@+id/btnMr"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="MR"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/btnMmenos"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:text="M-"
-                android:textSize="36sp" />
+    <Button
+        android:id="@+id/btnCuadrado"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="x^2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/btnM"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:text="M"
-                android:textSize="36sp" />
+    <Button
+        android:id="@+id/btnCubo"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="x^3"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/btnMS"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:text="MS"
-                android:textSize="36sp" />
+    <Button
+        android:id="@+id/btnPotencia"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="x^y"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-        </TableRow>
+    <Button
+        android:id="@+id/btnFact"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="n!"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-        <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:gravity="center|center_horizontal|center_vertical">
+    <Button
+        android:id="@+id/btnParentesisA"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="("
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btnParentesisC"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text=")"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/btnSumar"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:text="@string/btn_suma"
-                    android:textSize="36sp" />
+    <Button
+        android:id="@+id/btnC"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#F16C6C"
+        android:text="c"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/btnRestar"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:text="@string/btn_resta"
-                    android:textSize="36sp" />
+    <Button
+        android:id="@+id/btnDel"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#F16C6C"
+        android:text="DEL"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-            </TableRow>
+    <Button
+        android:id="@+id/btn7"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="7"
+        android:textColor="#050505"
+        android:textSize="20sp" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn8"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="8"
+        android:textColor="#050505"
+        android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/btnMultiplicar"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:text="@string/btn_multiplicacion"
-                    android:textSize="36sp" />
+    <Button
+        android:id="@+id/btn9"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="9"
+        android:textColor="#050505"
+        android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/btnDividir"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:text="@string/btn_division"
-                    android:textSize="36sp" />
+    <Button
+        android:id="@+id/btnResta"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#396885"
+        android:text="-"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-            </TableRow>
+    <Button
+        android:id="@+id/btn4"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="4"
+        android:textColor="#050505"
+        android:textSize="20sp" />
 
-        </TableLayout>
+    <Button
+        android:id="@+id/btn5"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="5"
+        android:textColor="#050505"
+        android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/lblDos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn6"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="6"
+        android:textColor="#050505"
+        android:textSize="20sp" />
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btnSuma"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#396885"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="100dp">
+    <Button
+        android:id="@+id/btn1"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="1"
+        android:textColor="#050505"
+        android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/lblIgual"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|center_horizontal|center_vertical"
-                    android:text="="
-                    android:textSize="30sp" />
+    <Button
+        android:id="@+id/btn2"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="2"
+        android:textColor="#050505"
+        android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/lblResultado"
-                    android:layout_width="237dp"
-                    android:layout_height="wrap_content"
-                    android:textSize="30sp" />
+    <Button
+        android:id="@+id/btn3"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="3"
+        android:textColor="#050505"
+        android:textSize="20sp" />
 
-            </TableRow>
+    <Button
+        android:id="@+id/btnMultiplica"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#396885"
+        android:text="x"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-        </TableLayout>
+    <Button
+        android:id="@+id/btnPunto"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="."
+        android:textSize="20sp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn0"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#FFFFFF"
+        android:text="0"
+        android:textColor="#050505"
+        android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/lbl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Memoria= "
-                android:textSize="20sp" />
+    <Button
+        android:id="@+id/btnIgual"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#90EA99"
+        android:text="="
+        android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/lblMemoria"
-                android:layout_width="193dp"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textSize="24sp" />
-        </TableRow>
+    <Button
+        android:id="@+id/btnDivision"
+        android:layout_height="80dp"
+        android:layout_columnWeight="1"
+        android:background="#396885"
+        android:text="÷"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</GridLayout>

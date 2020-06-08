@@ -16,23 +16,4 @@ public class ModelMainActivityTest {
         model = new ModelMainActivity();
     }
 
-    @Test
-    public void sumar() {
-        assertEquals(8.0 ,model.mSumar(4f,4f),0.0);
-    }
-
-    @Test
-    public void restar() {
-        assertEquals(2,model.mRestar(6f,4f),0.0);
-    }
-
-    @Test
-    public void multiplicar() {
-        assertEquals(4,model.mMultiplicar(2f,2f),0.0);
-    }
-
-    @Test
-    public void dividir() {
-        assertEquals(2,model.mDividir(4f,2f),0.0);
-    }
 }
