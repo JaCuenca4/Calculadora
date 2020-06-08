@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnSuma;
     Button btnMultiplica;
     Button btnDivision;
+    String operacion = "";
 
     InterfacesMainActivity.Presenter presenter;
 
@@ -66,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     @Override
     public void onClick(View v) {
-        String operacion = "";
         switch (v.getId()) {
             case R.id.btnMc:
                 break;
@@ -109,10 +109,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 operacion += "+";
                 break;
             case R.id.btnMultiplica:
-                operacion += "x";
+                operacion += "*";
                 break;
             case R.id.btnDivision:
-                operacion += "÷";
+                operacion += "/";
                 break;
             case R.id.btnIgual:
                 presenter.calcular(operacion);
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 operacion += "9";
                 break;
         }
-        txtResultado.setText(operacion);
+        txtOperacion.setText(operacion);
     }
 
     /**
@@ -223,6 +223,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void showResult(String result) {
+        txtResultado.setText(result);
     }
 
     @Override

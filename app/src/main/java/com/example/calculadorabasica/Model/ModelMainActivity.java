@@ -26,6 +26,8 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
     @Override
     public void calcular(String operacion) {
         this.resultado = operador.calcularOperacion(operacion);
+        System.out.println("operacion = " + operacion);
+        System.out.println("resultado = " + resultado.getNumero());
         enviarResultado();
     }
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Evaluador {
 
+    private String numAux = "";
     private int i;
     private ArrayList<String> postfija = new ArrayList<>();
     private String postfija2 = "";
@@ -15,7 +16,6 @@ public class Evaluador {
     public boolean EvaluarFuncion(String infija) {
         //Recorrer la cadena Infija
         try {
-            String numAux = "";
             boolean verfNum = false;
             for (i = 0; i < infija.length(); i++) {
                 switch (infija.charAt(i)) {
@@ -233,6 +233,7 @@ public class Evaluador {
 
     public void reset() {
         pila = new Pila();
+        numAux = "";
         postfija2 = "";
         postfija.clear();
     }

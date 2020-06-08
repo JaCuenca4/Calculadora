@@ -11,7 +11,7 @@ public class Operacion {
         Numero respuesta = new Numero();
         try{
             if(evaluador.EvaluarFuncion(operacion)){
-                respuesta.setNumero(Float.parseFloat(evaluador.getPila().toString()));
+                respuesta.setNumero(Double.parseDouble(evaluador.getPila().getUltimoElemento()));
                 evaluador.reset();
                 return respuesta;
             }else{
