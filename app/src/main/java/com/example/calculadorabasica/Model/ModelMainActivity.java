@@ -136,8 +136,14 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
 
     }
     public double mresiduo(double num1,double num2) {
-
-            return ((num1)%(num2));
+        double residuo = num1%num2;
+        if (residuo > 0 &&num1 < 0)
+        {
+            residuo -= num2;
+        }else if(residuo < 0){
+            residuo=residuo;
+        }
+        return residuo;
 
     }
 

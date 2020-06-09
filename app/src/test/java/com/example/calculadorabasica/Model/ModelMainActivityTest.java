@@ -69,6 +69,6 @@ public class ModelMainActivityTest {
     }
     @Test
     public void residuo() {
-        assertEquals(-1,model.mresiduo(5,-3),0.0);
+        assertEquals(-2,model.mresiduo(-2,-6),0.0);
     }
 }

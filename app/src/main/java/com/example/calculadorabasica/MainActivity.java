@@ -187,9 +187,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnPotencia:
                 operacion += "^";
                 break;
-            case R.id.btnMod:
-                operacion += "%";
-                break;
+
             case R.id.btnFact:
                 presenter.factorial(txtOperacion.getText().toString());
                 break;
@@ -220,8 +218,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnDivision:
                 operacion += "/";
                 break;
-            case R.id.btnIgual:
-                presenter.calcular(operacion);
+            case R.id.btnMod:
+                operacion += "%";
                 break;
             case R.id.btnPunto:
                 operacion += ".";

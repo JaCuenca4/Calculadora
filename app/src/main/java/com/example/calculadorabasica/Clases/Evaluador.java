@@ -232,7 +232,15 @@ public class Evaluador {
             return num1 / num2;
         }
         if (letra == '%') {
-            return num1 % num2;
+            double residuo = num1%num2;
+            if (residuo > 0 &&num1 < 0)
+            {
+                residuo -= num2;
+            }else if(residuo < 0){
+                residuo=residuo;
+            }
+            return residuo;
+
         }
         if (letra == '+') {
             return num1 + num2;
