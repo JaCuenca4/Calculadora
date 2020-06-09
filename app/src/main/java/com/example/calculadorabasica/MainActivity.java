@@ -95,12 +95,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 operacion += ")";
                 break;
             case R.id.btnC:
+                operacion = "";
+                txtResultado.setText("0");
+                break;
+            case R.id.btnDel:
                 if(!operacion.isEmpty()) {
                     operacion = operacion.substring(0, operacion.length() - 1);
                 }
-                break;
-            case R.id.btnDel:
-                operacion = "";
                 break;
             case R.id.btnResta:
                 operacion += "-";

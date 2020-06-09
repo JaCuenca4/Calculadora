@@ -31,6 +31,7 @@ public class Operacion {
     }
 
     public double factorial(double numero){
+
         if(numero==0){
             return 1;
         }else {
