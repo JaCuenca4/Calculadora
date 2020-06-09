@@ -135,7 +135,11 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
         }
 
     }
+    public double mresiduo(double num1,double num2) {
 
+            return ((num1)%(num2));
+
+    }
 
     /**
      * Funcion para recuperar de la memoria
@@ -186,6 +190,5 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
             this.presenter.enviarResultadoMemoria("Error al restar en memoria");
         }
     }
-
 
 }

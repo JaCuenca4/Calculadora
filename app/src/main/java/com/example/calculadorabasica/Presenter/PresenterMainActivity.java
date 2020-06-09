@@ -36,6 +36,7 @@ public class PresenterMainActivity implements InterfacesMainActivity.Presenter {
         model.factorial(operacion);
     }
 
+
     @Override
     public void limpiarMemoria() {
         model.limpiarMemoria();

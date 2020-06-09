@@ -38,4 +38,5 @@ public class Operacion {
             return numero * factorial(numero-1);
         }
     }
+
 }

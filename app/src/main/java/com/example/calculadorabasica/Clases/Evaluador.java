@@ -67,6 +67,18 @@ public class Evaluador {
                             postfija.add(numAux);
                         }
                         break;
+                    case '%':
+                        if (numAux.equals("")) {
+                            compararOperadores(2, "%");
+                        } else {
+                            postfija.add(numAux);
+                            numAux = "";
+                            i--;
+                        }
+                        if (infija.length() - 2 == i && !numAux.equals("")) {
+                            postfija.add(numAux);
+                        }
+                        break;
                     case '^':
                         if (numAux.equals("")) {
                             compararOperadores(4, "^");
@@ -218,6 +230,9 @@ public class Evaluador {
         }
         if (letra == '/') {
             return num1 / num2;
+        }
+        if (letra == '%') {
+            return num1 % num2;
         }
         if (letra == '+') {
             return num1 + num2;

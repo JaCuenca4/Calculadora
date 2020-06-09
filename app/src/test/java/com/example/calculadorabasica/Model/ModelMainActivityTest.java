@@ -67,4 +67,8 @@ public class ModelMainActivityTest {
     public void exponente() {
         assertEquals(16,model.mExponente(2,4),0.0);
     }
+    @Test
+    public void residuo() {
+        assertEquals(-1,model.mresiduo(5,-3),0.0);
+    }
 }

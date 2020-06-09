@@ -37,7 +37,6 @@ public interface InterfacesMainActivity {
         void calcular(String operacion);
 
         void factorial(String operacion);
-
         void enviarResultado();
 
         void limpiarMemoria();
@@ -47,5 +46,6 @@ public interface InterfacesMainActivity {
         void restarMemoria(String num);
 
         void recuperarMemoria();
+
     }
 }
