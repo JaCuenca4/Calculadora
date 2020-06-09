@@ -10,7 +10,7 @@ public class Evaluador {
     private String postfija2 = "";
     private Pila pila = new Pila();
 
-    public Evaluador(){
+    public Evaluador() {
     }
 
     public boolean EvaluarFuncion(String infija) {
@@ -21,14 +21,12 @@ public class Evaluador {
                 switch (infija.charAt(i)) {
                     case '-':
                         if (numAux.equals("")) {
-                            compararOperadores(1, "-");
+                            numAux += String.valueOf(infija.charAt(i));
                         } else {
                             postfija.add(numAux);
                             numAux = "";
+                            compararOperadores(1, "+");
                             i--;
-                        }
-                        if (infija.length() - 2 == i && !numAux.equals("")) {
-                            postfija.add(numAux);
                         }
                         break;
                     case '+':
@@ -232,12 +230,11 @@ public class Evaluador {
             return num1 / num2;
         }
         if (letra == '%') {
-            double residuo = num1%num2;
-            if (residuo > 0 &&num1 < 0)
-            {
+            double residuo = num1 % num2;
+            if (residuo > 0 && num1 < 0) {
                 residuo -= num2;
-            }else if(residuo < 0){
-                residuo=residuo;
+            } else if (residuo < 0) {
+                residuo = residuo;
             }
             return residuo;
 
