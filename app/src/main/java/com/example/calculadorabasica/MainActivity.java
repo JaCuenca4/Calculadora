@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 operacion += "^";
                 break;
             case R.id.btnFact:
-                presenter.factorial(operacion);
+                presenter.factorial(txtOperacion.getText().toString());
                 break;
             case R.id.btnParentesisA:
                 operacion += "(";
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnC:
                 if(!operacion.isEmpty()) {
-                    operacion += operacion.substring(0, operacion.length() - 1);
+                    operacion = operacion.substring(0, operacion.length() - 1);
                 }
                 break;
             case R.id.btnDel:

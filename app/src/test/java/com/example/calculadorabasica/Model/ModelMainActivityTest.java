@@ -11,6 +11,8 @@ import static org.junit.Assert.*;
 public class ModelMainActivityTest {
 
     private ModelMainActivity model;
+
+
     @Before
     public void setup(){
         model = new ModelMainActivity();

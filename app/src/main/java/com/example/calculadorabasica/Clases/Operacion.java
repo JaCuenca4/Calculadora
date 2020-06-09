@@ -25,7 +25,7 @@ public class Operacion {
 
     public Numero calFactorial(String operacion){
         Numero respuesta = new Numero();
-        double num = Double.parseDouble(operacion.substring(0,operacion.length()-1));
+        double num = Double.parseDouble(operacion);
         respuesta.setNumero(factorial(num));
         return respuesta;
     }
