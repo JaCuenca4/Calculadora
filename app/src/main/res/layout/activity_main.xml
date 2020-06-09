@@ -40,7 +40,7 @@
 
     <Button
         android:id="@+id/btnMc"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="MC"
@@ -49,7 +49,7 @@
 
     <Button
         android:id="@+id/btnMmas"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_row="0"
         android:layout_columnWeight="1"
         android:background="#959393"
@@ -59,7 +59,7 @@
 
     <Button
         android:id="@+id/btnMmenos"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="M-"
@@ -68,7 +68,7 @@
 
     <Button
         android:id="@+id/btnMr"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="MR"
@@ -77,7 +77,8 @@
 
     <Button
         android:id="@+id/btnCuadrado"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="x^2"
@@ -87,7 +88,8 @@
 
     <Button
         android:id="@+id/btnCubo"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="x^3"
@@ -97,7 +99,8 @@
 
     <Button
         android:id="@+id/btnPotencia"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="x^y"
@@ -107,7 +110,7 @@
 
     <Button
         android:id="@+id/btnFact"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="n!"
@@ -116,8 +119,18 @@
         android:textSize="20sp" />
 
     <Button
+        android:id="@+id/btnMod"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="Mod"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Button
         android:id="@+id/btnParentesisA"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="("
@@ -126,7 +139,7 @@
 
     <Button
         android:id="@+id/btnParentesisC"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text=")"
@@ -135,7 +148,7 @@
 
     <Button
         android:id="@+id/btnC"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#F16C6C"
         android:text="c"
@@ -144,7 +157,7 @@
 
     <Button
         android:id="@+id/btnDel"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#F16C6C"
         android:text="DEL"
@@ -153,7 +166,7 @@
 
     <Button
         android:id="@+id/btn7"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="7"
@@ -162,7 +175,7 @@
 
     <Button
         android:id="@+id/btn8"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="8"
@@ -171,7 +184,7 @@
 
     <Button
         android:id="@+id/btn9"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="9"
@@ -180,7 +193,7 @@
 
     <Button
         android:id="@+id/btnResta"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#396885"
         android:text="-"
@@ -189,7 +202,7 @@
 
     <Button
         android:id="@+id/btn4"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="4"
@@ -198,7 +211,7 @@
 
     <Button
         android:id="@+id/btn5"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="5"
@@ -207,7 +220,7 @@
 
     <Button
         android:id="@+id/btn6"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="6"
@@ -216,7 +229,7 @@
 
     <Button
         android:id="@+id/btnSuma"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#396885"
         android:text="+"
@@ -225,7 +238,7 @@
 
     <Button
         android:id="@+id/btn1"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="1"
@@ -234,7 +247,7 @@
 
     <Button
         android:id="@+id/btn2"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="2"
@@ -243,7 +256,7 @@
 
     <Button
         android:id="@+id/btn3"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="3"
@@ -252,7 +265,7 @@
 
     <Button
         android:id="@+id/btnMultiplica"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#396885"
         android:text="x"
@@ -262,7 +275,7 @@
 
     <Button
         android:id="@+id/btnPunto"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="."
@@ -270,7 +283,7 @@
 
     <Button
         android:id="@+id/btn0"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#FFFFFF"
         android:text="0"
@@ -279,7 +292,7 @@
 
     <Button
         android:id="@+id/btnIgual"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#90EA99"
         android:text="="
@@ -287,7 +300,7 @@
 
     <Button
         android:id="@+id/btnDivision"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:background="#396885"
         android:text="÷"

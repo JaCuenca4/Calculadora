@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * The Btn fact.
      */
     Button btnFact;
+
+    Button btnMod;
     /**
      * The Btn parentesis a.
      */
@@ -185,6 +187,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnPotencia:
                 operacion += "^";
                 break;
+            case R.id.btnMod:
+                operacion += "%";
+                break;
             case R.id.btnFact:
                 presenter.factorial(txtOperacion.getText().toString());
                 break;
@@ -271,6 +276,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCubo = findViewById(R.id.btnCubo);
         btnPotencia = findViewById(R.id.btnPotencia);
         btnFact = findViewById(R.id.btnFact);
+        btnMod = findViewById(R.id.btnMod);
         btnParentesisA = findViewById(R.id.btnParentesisA);
         btnParentesisC = findViewById(R.id.btnParentesisC);
         btnC = findViewById(R.id.btnC);
@@ -299,6 +305,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCubo.setOnClickListener(this);
         btnPotencia.setOnClickListener(this);
         btnFact.setOnClickListener(this);
+        btnMod.setOnClickListener(this);
         btnParentesisA.setOnClickListener(this);
         btnParentesisC.setOnClickListener(this);
         btnC.setOnClickListener(this);
