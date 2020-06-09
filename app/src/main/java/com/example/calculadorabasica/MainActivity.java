@@ -16,40 +16,136 @@ import com.example.calculadorabasica.Presenter.PresenterMainActivity;
  * Clase encargada de manejear los elementos de la vista
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, InterfacesMainActivity.View {
-    //Atributos
+
+    /**
+     * The Txt memoria.
+     */
     TextView txtMemoria;
     TextView txtOperacion;
+    /**
+     * The Txt resultado.
+     */
     TextView txtResultado;
+    /**
+     * The Btn mc.
+     */
     Button btnMc;
+    /**
+     * The Btn mmas.
+     */
     Button btnMmas;
+    /**
+     * The Btn mmenos.
+     */
     Button btnMmenos;
+    /**
+     * The Btn mr.
+     */
     Button btnMr;
+    /**
+     * The Btn cuadrado.
+     */
     Button btnCuadrado;
+    /**
+     * The Btn cubo.
+     */
     Button btnCubo;
+    /**
+     * The Btn potencia.
+     */
     Button btnPotencia;
+    /**
+     * The Btn fact.
+     */
     Button btnFact;
+    /**
+     * The Btn parentesis a.
+     */
     Button btnParentesisA;
+    /**
+     * The Btn parentesis c.
+     */
     Button btnParentesisC;
+    /**
+     * The Btn c.
+     */
     Button btnC;
+    /**
+     * The Btn del.
+     */
     Button btnDel;
+    /**
+     * The Btn 0.
+     */
     Button btn0;
+    /**
+     * The Btn 1.
+     */
     Button btn1;
+    /**
+     * The Btn 2.
+     */
     Button btn2;
+    /**
+     * The Btn 3.
+     */
     Button btn3;
+    /**
+     * The Btn 4.
+     */
     Button btn4;
+    /**
+     * The Btn 5.
+     */
     Button btn5;
+    /**
+     * The Btn 6.
+     */
     Button btn6;
+    /**
+     * The Btn 7.
+     */
     Button btn7;
+    /**
+     * The Btn 8.
+     */
     Button btn8;
+    /**
+     * The Btn 9.
+     */
     Button btn9;
+    /**
+     * The Btn punto.
+     */
     Button btnPunto;
+    /**
+     * The Btn igual.
+     */
     Button btnIgual;
+    /**
+     * The Btn resta.
+     */
     Button btnResta;
+    /**
+     * The Btn suma.
+     */
     Button btnSuma;
+    /**
+     * The Btn multiplica.
+     */
     Button btnMultiplica;
+    /**
+     * The Btn division.
+     */
     Button btnDivision;
+    /**
+     * The Operacion.
+     */
     String operacion = "";
 
+    /**
+     * The Presenter.
+     */
     InterfacesMainActivity.Presenter presenter;
 
     @Override
@@ -69,12 +165,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnMc:
+                presenter.limpiarMemoria();
                 break;
             case R.id.btnMmas:
+                presenter.sumarMemoria(txtResultado.getText().toString());
                 break;
             case R.id.btnMmenos:
+                presenter.restarMemoria(txtResultado.getText().toString());
                 break;
             case R.id.btnMr:
+                presenter.recuperarMemoria();
                 break;
             case R.id.btnCuadrado:
                 operacion += "^2";
@@ -228,6 +328,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void showMemory(String result) {
+    public void showMemoria(String result) {
+        txtMemoria.setText(result);
+    }
+    @Override
+    public void showOperaciones(String result) {
+        txtMemoria.setText(result);
+
     }
 }

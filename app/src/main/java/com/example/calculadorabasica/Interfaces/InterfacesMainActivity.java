@@ -11,7 +11,8 @@ public interface InterfacesMainActivity {
     interface View{
         void findElement();
         void showResult(String result);
-        void showMemory(String result);
+        void showMemoria(String result);
+        void showOperaciones(String result);
 }
 
     /**
@@ -20,20 +21,31 @@ public interface InterfacesMainActivity {
     interface Presenter{
         void calcular(String operacion);
         void factorial(String operacion);
-        void limparMemoria();
-        void sumarMemoria();
-        void restarMemoria();
+        void limpiarMemoria();
+        void sumarMemoria(String numero);
+        void restarMemoria(String numero);
         void recuperarMemoria();
         void enviarResultado(String result);
+        void enviarResultadoMemoria(String result);
+        void enviarResultadoOperaciones(String result);
     }
 
     /**
      * Interfaz para los modelos
      */
-    interface Model{
+    interface Model {
         void calcular(String operacion);
+
         void factorial(String operacion);
+
         void enviarResultado();
-        void mostrarMemoria();
+
+        void limpiarMemoria();
+
+        void sumarMemoria(String num);
+
+        void restarMemoria(String num);
+
+        void recuperarMemoria();
     }
 }

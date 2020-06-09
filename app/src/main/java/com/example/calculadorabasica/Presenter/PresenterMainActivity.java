@@ -7,11 +7,18 @@ import com.example.calculadorabasica.Model.ModelMainActivity;
  * Clase que opera de intermediario entre el modelo y la vista
  */
 public class PresenterMainActivity implements InterfacesMainActivity.Presenter {
+    /**
+     * The View.
+     */
     InterfacesMainActivity.View view;
+    /**
+     * The Model.
+     */
     InterfacesMainActivity.Model model;
 
     /**
      * Constructor
+     *
      * @param view Vista
      */
     public PresenterMainActivity(InterfacesMainActivity.View view) {
@@ -30,27 +37,36 @@ public class PresenterMainActivity implements InterfacesMainActivity.Presenter {
     }
 
     @Override
-    public void limparMemoria() {
-
+    public void limpiarMemoria() {
+        model.limpiarMemoria();
     }
 
     @Override
-    public void sumarMemoria() {
-
+    public void sumarMemoria(String num) {
+        model.sumarMemoria(num);
     }
 
     @Override
-    public void restarMemoria() {
-
+    public void restarMemoria(String num){
+        model.restarMemoria(num);
     }
 
     @Override
     public void recuperarMemoria() {
-
+        model.recuperarMemoria();
     }
 
     @Override
     public void enviarResultado(String result) {
         view.showResult(result);
+    }
+
+    @Override
+    public void enviarResultadoMemoria(String result) {
+        view.showMemoria(result);
+    }
+    @Override
+    public void enviarResultadoOperaciones(String result) {
+        view.showOperaciones(result);
     }
 }
