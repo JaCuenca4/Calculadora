@@ -137,15 +137,21 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
     }
     public double mresiduo(double num1,double num2) {
         double residuo = num1%num2;
-        if (residuo > 0 &&num1 < 0)
-        {
+        if (residuo > 0 && num1 < 0) {
             residuo -= num2;
-        }else if(residuo < 0){
-            residuo=residuo;
+        }
+        if (residuo > 0 && num2 < 0) {
+            residuo+=num2;
+        }
+        if (residuo < 0 && num1 < 0) {
+            residuo+=num2;
+        }
+        if (residuo < 0 && num2 < 0 && num1 < 0) {
+            residuo-=num2;
         }
         return residuo;
-
     }
+
 
     /**
      * Funcion para recuperar de la memoria

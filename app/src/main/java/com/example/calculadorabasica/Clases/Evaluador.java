@@ -223,6 +223,7 @@ public class Evaluador {
     }
 
     private double operacion(char letra, double num1, double num2) {
+        Double numero = num1;
         if (letra == '*') {
             return num1 * num2;
         }
@@ -230,11 +231,18 @@ public class Evaluador {
             return num1 / num2;
         }
         if (letra == '%') {
-            double residuo = num1 % num2;
+            double residuo = num1%num2;
             if (residuo > 0 && num1 < 0) {
                 residuo -= num2;
-            } else if (residuo < 0) {
-                residuo = residuo;
+            }
+            if (residuo > 0 && num2 < 0) {
+                residuo+=num2;
+            }
+            if (residuo < 0 && num1 < 0) {
+                residuo+=num2;
+            }
+            if (residuo < 0 && num2 < 0 && num1 < 0) {
+                residuo-=num2;
             }
             return residuo;
 
@@ -243,7 +251,11 @@ public class Evaluador {
             return num1 + num2;
         }
         if (letra == '-') {
-            return num1 - num2;
+            if(numero==null){
+                return (-num2);
+            } else {
+                return num1 - num2;
+            }
         }
         if (letra == '^') {
             return Math.pow(num1, num2);//potencia
