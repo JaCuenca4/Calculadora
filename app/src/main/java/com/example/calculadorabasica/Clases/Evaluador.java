@@ -77,6 +77,18 @@ public class Evaluador {
                             postfija.add(numAux);
                         }
                         break;
+                    case 'L':
+                        if (numAux.equals("")) {
+                            compararOperadores(4, "L");
+                        } else {
+                            postfija.add(numAux);
+                            numAux = "";
+                            i--;
+                        }
+                        if (infija.length() - 2 == i && !numAux.equals("")) {
+                            postfija.add(numAux);
+                        }
+                        break;
                     case '√':
                         postfija.add("0.5");
                         compararOperadores(4, "√");
@@ -193,7 +205,7 @@ public class Evaluador {
     }
 
     private int prioridadEnPila(char operador) {
-        if (operador == '^' || operador == '√') {
+        if (operador == '^' || operador == '√' || operador == 'L') {
             return 3;
         }
         if (operador == '*' || operador == '/') {
