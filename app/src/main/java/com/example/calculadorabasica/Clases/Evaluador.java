@@ -93,6 +93,16 @@ public class Evaluador {
                         postfija.add("0.5");
                         compararOperadores(4, "√");
                         break;
+                    case 's':
+                        postfija.add("0.1");
+                        compararOperadores(4,"s");
+                        i += 2;
+                        break;
+                    case 'c':
+                        postfija.add("0.1");
+                        compararOperadores(4,"c");
+                        i += 2;
+                        break;
                     case '^':
                         if (numAux.equals("")) {
                             compararOperadores(4, "^");
@@ -205,7 +215,7 @@ public class Evaluador {
     }
 
     private int prioridadEnPila(char operador) {
-        if (operador == '^' || operador == '√' || operador == 'L') {
+        if (operador == '^' || operador == '√' || operador == 'L' || operador =='s' || operador == 'c') {
             return 3;
         }
         if (operador == '*' || operador == '/') {
@@ -240,6 +250,13 @@ public class Evaluador {
 
     private double operacion(char letra, double num1, double num2) {
         Double numero = num1;
+        if(letra =='s'){
+            return seno(num2);
+        }
+        if(letra == 'c'){
+            return coseno(num2);
+        }
+
         if (letra == '*') {
             return num1 * num2;
         }
@@ -309,6 +326,18 @@ public class Evaluador {
             x = (x + num/x) / 2;
         }
         return x;
+    }
+
+    public double coseno(double rad){
+        double respuesta = 0.0;
+        //Aqui va el codigo
+        return respuesta;
+    }
+
+    public double seno(double rad){
+        double respuesta = 0.0;
+        //Aqui va el codigo
+        return respuesta;
     }
 
     public void reset() {

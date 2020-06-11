@@ -143,6 +143,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button btnRaiz;
     Button btnLog;
+    Button btnSen;
+    Button btnCos;
     /**
      * The Operacion.
      */
@@ -232,6 +234,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnRaiz:
                 operacion += "√";
                 break;
+            case R.id.btnSen:
+                operacion += "sen";
+                break;
+            case R.id.btnCos:
+                operacion += "cos";
+                break;
             case R.id.btnIgual:
                 presenter.calcular(operacion);
                 break;
@@ -301,6 +309,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPunto = findViewById(R.id.btnPunto);
         btnRaiz = findViewById(R.id.btnRaiz);
         btnLog = findViewById(R.id.btnLog);
+        btnSen = findViewById(R.id.btnSen);
+        btnCos = findViewById(R.id.btnCos);
         btn0 = findViewById(R.id.btn0);
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);

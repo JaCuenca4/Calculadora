@@ -76,6 +76,28 @@
         android:textSize="20sp" />
 
     <Button
+        android:id="@+id/btnCos"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="Cos"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/btnSen"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="Sen"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+
+    <Button
         android:id="@+id/btnCuadrado"
         android:layout_height="wrap_content"
         android:layout_columnSpan="1"
