@@ -185,7 +185,7 @@ public class Evaluador {
 
     private static boolean isNumeric(String cadena) {
         try {
-            Double.parseDouble(cadena);
+            Integer.parseInt(cadena);
             return true;
         } catch (NumberFormatException nfe) {
             return false;
@@ -193,7 +193,7 @@ public class Evaluador {
     }
 
     private int prioridadEnPila(char operador) {
-        if (operador == '^' || operador == '√') {
+        if (operador == '^') {
             return 3;
         }
         if (operador == '*' || operador == '/') {
@@ -231,25 +231,22 @@ public class Evaluador {
         if (letra == '*') {
             return num1 * num2;
         }
-        if (letra == '√') {
-            return raiz(num2);
-        }
         if (letra == '/') {
             return num1 / num2;
         }
         if (letra == '%') {
-            double residuo = num1 % num2;
+            double residuo = num1%num2;
             if (residuo > 0 && num1 < 0) {
                 residuo -= num2;
             }
             if (residuo > 0 && num2 < 0) {
-                residuo += num2;
+                residuo+=num2;
             }
             if (residuo < 0 && num1 < 0) {
-                residuo += num2;
+                residuo+=num2;
             }
             if (residuo < 0 && num2 < 0 && num1 < 0) {
-                residuo -= num2;
+                residuo-=num2;
             }
             return residuo;
 
@@ -258,7 +255,7 @@ public class Evaluador {
             return num1 + num2;
         }
         if (letra == '-') {
-            if (numero == null) {
+            if(numero==null){
                 return (-num2);
             } else {
                 return num1 - num2;
@@ -268,14 +265,6 @@ public class Evaluador {
             return Math.pow(num1, num2);//potencia
         }
         return 0;
-    }
-
-    public double raiz(double num){
-        double x = 1.0;
-        for (int i = 1; i < 10; i++) {
-            x = (x + num/x) / 2;
-        }
-        return x;
     }
 
     public void reset() {

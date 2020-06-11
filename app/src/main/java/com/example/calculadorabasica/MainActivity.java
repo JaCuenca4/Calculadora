@@ -227,10 +227,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 operacion += "/";
                 break;
             case R.id.btnLog:
-                operacion += "log";
                 break;
             case R.id.btnRaiz:
-                operacion +="√";
                 break;
             case R.id.btnIgual:
                 presenter.calcular(operacion);
@@ -299,8 +297,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDivision = findViewById(R.id.btnDivision);
         btnIgual = findViewById(R.id.btnIgual);
         btnPunto = findViewById(R.id.btnPunto);
-        btnRaiz = findViewById(R.id.btnRaiz);
-        btnLog = findViewById(R.id.btnLog);
+        btnRaiz = findViewById(R.id.btnResta);
+        btnLog = findViewById(R.id.btnResta);
         btn0 = findViewById(R.id.btn0);
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
