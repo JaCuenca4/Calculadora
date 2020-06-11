@@ -260,9 +260,26 @@ public class Evaluador {
         if (letra == '^') {
             return Math.pow(num1, num2);//potencia
         }
+        if (letra == 'L') {
+            int b=(int)num1;
+            double n=num2;
+            double val = 0;
+            int i,accurate = 10,reps=0;
+            while(n != 1 && accurate>=0) {
+                for(i=0;n>=b;i++) n /= b;
+                n = p(n,10);
+                val = 10*(val+i);
+                accurate--; reps++;
+            }
+            return (double)val/p(10,reps);
+        }
         return 0;
     }
-
+    double p(double x,int i) {
+        double r = 1.0;
+        for(int j=i;j>0;j--) r *= x;
+        return r;
+    }
     public void reset() {
         pila = new Pila();
         numAux = "";

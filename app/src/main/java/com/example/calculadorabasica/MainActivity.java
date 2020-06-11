@@ -224,6 +224,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 operacion += "/";
                 break;
             case R.id.btnLog:
+                operacion += "L";
                 break;
             case R.id.btnRaiz:
                 break;
