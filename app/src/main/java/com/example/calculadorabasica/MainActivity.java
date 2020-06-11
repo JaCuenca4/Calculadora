@@ -342,6 +342,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPunto.setOnClickListener(this);
         btnLog.setOnClickListener(this);
         btnRaiz.setOnClickListener(this);
+        btnCos.setOnClickListener(this);
+        btnSen.setOnClickListener(this);
         btn0.setOnClickListener(this);
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
