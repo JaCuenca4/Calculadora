@@ -78,7 +78,7 @@
     <Button
         android:id="@+id/btnCuadrado"
         android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
+        android:layout_columnSpan="1"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="x^2"
@@ -89,7 +89,7 @@
     <Button
         android:id="@+id/btnCubo"
         android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
+        android:layout_columnSpan="1"
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="x^3"
@@ -104,6 +104,28 @@
         android:layout_columnWeight="1"
         android:background="#959393"
         android:text="x^y"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnRaiz"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="√"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnLog"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:layout_columnWeight="1"
+        android:background="#959393"
+        android:text="Log"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20sp" />

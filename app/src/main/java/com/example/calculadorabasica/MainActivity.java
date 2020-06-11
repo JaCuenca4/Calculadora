@@ -140,6 +140,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * The Btn division.
      */
     Button btnDivision;
+
+    Button btnRaiz;
+    Button btnLog;
     /**
      * The Operacion.
      */
@@ -220,7 +223,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnDivision:
                 operacion += "/";
                 break;
-
+            case R.id.btnLog:
+                break;
+            case R.id.btnRaiz:
+                break;
             case R.id.btnIgual:
                 presenter.calcular(operacion);
                 break;
@@ -288,6 +294,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDivision = findViewById(R.id.btnDivision);
         btnIgual = findViewById(R.id.btnIgual);
         btnPunto = findViewById(R.id.btnPunto);
+        btnRaiz = findViewById(R.id.btnResta);
+        btnLog = findViewById(R.id.btnResta);
         btn0 = findViewById(R.id.btn0);
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
@@ -317,6 +325,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDivision.setOnClickListener(this);
         btnIgual.setOnClickListener(this);
         btnPunto.setOnClickListener(this);
+        btnLog.setOnClickListener(this);
+        btnRaiz.setOnClickListener(this);
         btn0.setOnClickListener(this);
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
