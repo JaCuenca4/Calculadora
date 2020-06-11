@@ -1,6 +1,8 @@
 package com.example.calculadorabasica.Clases;
 
 import java.util.ArrayList;
+import java.lang.Math;
+
 
 public class Evaluador {
 
@@ -327,17 +329,42 @@ public class Evaluador {
         }
         return x;
     }
-
+    private static double GradesToRadians(double x)//funciones statics necesitan de parametros
+    {                                            //solo puede ser llamada por funciones miembro no por el objeto.
+        return ((x * (double)Math.PI) / 180);
+    }
     public double coseno(double rad){
-        double respuesta = 0.0;
-        //Aqui va el codigo
-        return respuesta;
+        double acum = 0.0f;
+        rad = GradesToRadians(rad);
+        for (double i = 0; i <= 15 - 1; i++)
+        {
+            acum += (((double)Math.pow(-1, i) *
+                    (double)Math.pow(rad, 2 * i))
+                    / Factorial(2 * i));
+        }
+        return acum;
     }
 
     public double seno(double rad){
-        double respuesta = 0.0;
-        //Aqui va el codigo
-        return respuesta;
+        double acum = 0.0f;
+        rad = GradesToRadians(rad);
+        for (double i = 0; i <= 15 - 1; i++)
+        {
+            acum += (((double)Math.pow(-1, i) *
+                    (double)Math.pow(rad, 2 * i + 1))
+                    / Factorial(2 * i + 1));
+        }
+        return acum;
+    }
+
+    public double Factorial(double n)
+    {
+        double prod = 1; //acumulador
+        for (double j = 1; j <= n; j++)
+        {
+            prod *= j;
+        }
+        return prod;
     }
 
     public void reset() {
