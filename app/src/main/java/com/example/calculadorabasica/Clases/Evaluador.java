@@ -275,9 +275,11 @@ public class Evaluador {
         }
         return 0;
     }
-    double p(double x,int i) {
+    public double p(double x,int i) {
         double r = 1.0;
-        for(int j=i;j>0;j--) r *= x;
+        for(int j=i;j>0;j--) {
+            r *= x;
+        }
         return r;
     }
     public void reset() {
