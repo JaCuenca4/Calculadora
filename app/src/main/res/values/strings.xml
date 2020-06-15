@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CalculadoraBasica</string>
+    <string name="app_name">Calculadora Básica</string>
     <string name="lblNumber">Ingrese un número</string>
     <string name="btn_suma">+</string>
     <string name="btn_resta">-</string>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:columnCount="4"
     android:orientation="horizontal"
-    android:rowCount="10">
+    android:rowCount="12">
+
 
     <TextView
         android:id="@+id/txtMemoria"
@@ -21,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_columnSpan="4"
         android:layout_gravity="end"
-        android:layout_marginBottom="9dp"
         android:paddingRight="10dp"
         android:text="2+25+4"
         android:textAlignment="textEnd"
@@ -85,6 +85,7 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20sp" />
+
     <Button
         android:id="@+id/btnSen"
         android:layout_height="wrap_content"
