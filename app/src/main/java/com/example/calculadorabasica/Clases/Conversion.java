@@ -18,7 +18,7 @@ public class Conversion {
         resultados.add(getOctal(dato));
         resultados.add(getBinario(dato));
 
-        return null;
+        return resultados;
     }
     public String convertDecimal(String dato, String identificador){
         if(identificador.equals("HEX")){
