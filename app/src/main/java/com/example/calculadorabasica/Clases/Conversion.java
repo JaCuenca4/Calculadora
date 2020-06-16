@@ -56,8 +56,14 @@ public class Conversion {
     }
 
     public String getBinario(String dato){
-        int dato2=Integer.getInteger(dato);
-        String binario = Long.toBinaryString(dato2);
-        return binario;
+        int dato2=Integer.valueOf(dato);
+        int exp=0,binario=0,digito;
+        while(dato2!=0){
+            digito = dato2 % 2;
+            binario = binario + digito * Math.pow(10, exp);
+            exp++;
+            dato2 = dato2/2;
+        }
+        return String.valueOf(dato2);
     }
 }
