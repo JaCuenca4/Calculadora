@@ -50,14 +50,13 @@ public class Conversion {
     public String getOctal(String dato){
         int dato2=Integer.getInteger(dato);
         String octal = Integer.toOctalString(dato2);
-
-
         return octal;
     }
 
     public String getBinario(String dato){
         int dato2=Integer.valueOf(dato);
-        int exp=0,binario=0,digito;
+        int exp=0,digito;
+        double binario=0.0;
         while(dato2!=0){
             digito = dato2 % 2;
             binario = binario + digito * Math.pow(10, exp);

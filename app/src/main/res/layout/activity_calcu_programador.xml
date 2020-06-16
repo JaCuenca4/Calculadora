@@ -15,7 +15,7 @@
         android:paddingRight="10dp"
         android:text="Dec"
         android:textAlignment="textEnd"
-        android:textSize="30dp" />
+        android:textSize="32sp" />
 
     <TextView
         android:id="@+id/txtInput"
@@ -23,9 +23,8 @@
         android:layout_columnSpan="4"
         android:layout_gravity="end"
         android:paddingRight="10dp"
-        android:text="9658"
         android:textAlignment="textEnd"
-        android:textSize="55dp" />
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/txtHexa"
@@ -33,11 +32,11 @@
         android:layout_columnSpan="4"
         android:layout_gravity="start"
         android:layout_marginBottom="2dp"
-        android:paddingRight="10dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="HEX"
         android:textAlignment="textStart"
-        android:textSize="20dp" />
+        android:textSize="21sp" />
 
     <TextView
         android:id="@+id/txtDec"
@@ -45,11 +44,11 @@
         android:layout_columnSpan="4"
         android:layout_gravity="start"
         android:layout_marginBottom="2dp"
-        android:paddingRight="10dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="DEC"
         android:textAlignment="textStart"
-        android:textSize="20dp" />
+        android:textSize="21sp" />
 
     <TextView
         android:id="@+id/txtOct"
@@ -57,11 +56,11 @@
         android:layout_columnSpan="4"
         android:layout_gravity="start"
         android:layout_marginBottom="2dp"
-        android:paddingRight="10dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="OCT"
         android:textAlignment="textStart"
-        android:textSize="20dp" />
+        android:textSize="21sp" />
 
     <TextView
         android:id="@+id/txtBin"
@@ -69,11 +68,11 @@
         android:layout_columnSpan="4"
         android:layout_gravity="start"
         android:layout_marginBottom="2dp"
-        android:paddingRight="10dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="BIN"
         android:textAlignment="textStart"
-        android:textSize="20dp" />
+        android:textSize="21sp" />
 
     <Button
         android:id="@+id/btnHex"

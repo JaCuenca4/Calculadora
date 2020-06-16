@@ -85,16 +85,24 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
      */
     @Override
     public void calcular(String operacion) {
-        this.resultado = operador.calcularOperacion(operacion);
-        System.out.println("operacion = " + operacion);
-        System.out.println("resultado = " + resultado.getNumero());
-        enviarResultado();
+        if (operacion.charAt(0) == '√' && operacion.charAt(1) == '-') {
+            presenter.enviarResultado("Math Error");
+        }else{
+            this.resultado = operador.calcularOperacion(operacion);
+            System.out.println("operacion = " + operacion);
+            System.out.println("resultado = " + resultado.getNumero());
+            enviarResultado();
+        }
     }
 
     @Override
     public void factorial(String operacion) {
-        this.resultado = operador.calFactorial(operacion);
-        enviarResultado();
+        if(operacion.charAt(0)!='-'){
+            this.resultado = operador.calFactorial(operacion);
+            enviarResultado();
+        }else{
+            presenter.enviarResultado("Math Error");
+        }
     }
     /**
      * Función que envía el resultado
