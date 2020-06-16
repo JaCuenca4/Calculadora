@@ -32,7 +32,7 @@ public class Conversion {
             int decimal=Integer.parseInt(dato,8);
             return String.valueOf(decimal);
         }else{
-            return "dato";
+            return dato;
         }
     }
     public String getHexa(String dato){
