@@ -36,27 +36,25 @@ public class Conversion {
         }
     }
     public String getHexa(String dato){
-        int dato2=Integer.getInteger(dato);
+        int dato2=Integer.valueOf(dato);
         String hexadecimal = Integer.toHexString(dato2);
-       return hexadecimal;
+       return "HEX "+hexadecimal.toUpperCase();
 
     }
 
     public String getDecimal(String dato){
-        return dato;
+        return "DEC "+dato;
     }
 
     public String getOctal(String dato){
-        int dato2=Integer.getInteger(dato);
+        int dato2=Integer.valueOf(dato);
         String octal = Integer.toOctalString(dato2);
-
-
-        return octal;
+        return "OCT "+octal;
     }
 
     public String getBinario(String dato){
-        int dato2=Integer.getInteger(dato);
+        int dato2=Integer.valueOf(dato);
         String binario = Long.toBinaryString(dato2);
-        return binario;
+        return "BIN "+binario;
     }
 }
