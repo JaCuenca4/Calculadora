@@ -208,8 +208,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 presenter.restarMemoria(txtResultado.getText().toString());
                 break;
             case R.id.btnMr:
-                operacion += txtMemoria.getText().toString();
                 presenter.recuperarMemoria();
+                operacion += txtMemoria.getText().toString();
                 break;
             case R.id.btnCuadrado:
                 operacion += "^2";
