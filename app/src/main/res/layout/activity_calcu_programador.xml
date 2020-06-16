@@ -13,7 +13,7 @@
         android:layout_columnSpan="4"
         android:layout_gravity="end"
         android:paddingRight="10dp"
-        android:text="Dec"
+        android:text="DEC"
         android:textAlignment="textEnd"
         android:textSize="32sp" />
 

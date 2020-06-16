@@ -11,12 +11,11 @@ public class Conversion {
 
     public List<String> convertir(String dato, String identificador){
         List<String> resultados = new ArrayList<>();
-
-        dato=convertDecimal(dato,identificador);
-        resultados.add(getHexa(dato));
-        resultados.add(getDecimal(dato));
-        resultados.add(getOctal(dato));
-        resultados.add(getBinario(dato));
+        String dato2=convertDecimal(dato,identificador);
+        resultados.add(getHexa(dato2));
+        resultados.add(getDecimal(dato2));
+        resultados.add(getOctal(dato2));
+        resultados.add(getBinario(dato2));
 
         return resultados;
     }
@@ -33,7 +32,7 @@ public class Conversion {
             int decimal=Integer.parseInt(dato,8);
             return String.valueOf(decimal);
         }else{
-            return dato;
+            return "dato";
         }
     }
     public String getHexa(String dato){
