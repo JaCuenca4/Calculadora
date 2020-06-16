@@ -16,12 +16,11 @@ public class Conversion {
         resultados.add(getDecimal(dato2));
         resultados.add(getOctal(dato2));
         resultados.add(getBinario(dato2));
-
         return resultados;
     }
     public String convertDecimal(String dato, String identificador){
         if(identificador.equals("HEX")){
-            int decimal = Integer.parseInt(dato, 16);
+            Long decimal = Long.parseLong(dato, 16);
             return String.valueOf(decimal);
         }else if(identificador.equals("DEC")){
             return dato;
@@ -29,15 +28,15 @@ public class Conversion {
             long numeroDecimal = Long.parseLong(dato, 2);
             return String.valueOf(numeroDecimal);
         }else if(identificador.equals("OCT")){
-            int decimal=Integer.parseInt(dato,8);
+            Long decimal=Long.parseLong(dato,8);
             return String.valueOf(decimal);
         }else{
             return dato;
         }
     }
     public String getHexa(String dato){
-        int dato2=Integer.getInteger(dato);
-        String hexadecimal = Integer.toHexString(dato2);
+        Long dato2=Long.getLong(dato);
+        String hexadecimal = Long.toHexString(dato2);
        return hexadecimal;
 
     }
@@ -47,15 +46,15 @@ public class Conversion {
     }
 
     public String getOctal(String dato){
-        int dato2=Integer.getInteger(dato);
-        String octal = Integer.toOctalString(dato2);
+        Long dato2=Long.getLong(dato);
+        String octal = Long.toOctalString(dato2);
 
 
         return octal;
     }
 
     public String getBinario(String dato){
-        int dato2=Integer.getInteger(dato);
+        Long dato2=Long.getLong(dato);
         String binario = Long.toBinaryString(dato2);
         return binario;
     }
