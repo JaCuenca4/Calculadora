@@ -64,6 +64,7 @@ public class PresenterMainActivity implements InterfacesMainActivity.Presenter {
 
     @Override
     public void enviarResultadoMemoria(String result) {
+
         view.showMemoria(result);
     }
     @Override
