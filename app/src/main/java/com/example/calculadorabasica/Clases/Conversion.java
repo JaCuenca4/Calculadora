@@ -9,34 +9,45 @@ public class Conversion {
 
     }
 
-    public List<String> convertir(String dato){
+    public List<String> convertir(String dato, String identificador){
         List<String> resultados = new ArrayList<>();
 
-        resultados.add(getHexadecimal(dato));
-        resultados.add(getDecimal(dato));
-        resultados.add(getOctal(dato));
-        resultados.add(getBinario(dato));
+        resultados.add(getHexadecimal(dato,identificador));
+        resultados.add(getDecimal(dato,identificador));
+        resultados.add(getOctal(dato,identificador));
+        resultados.add(getBinario(dato,identificador));
 
         return null;
     }
 
-    public String getHexadecimal(String dato){
+    public String getHexadecimal(String dato,String identificador){
         //Codigo para convertir
+        if(identificador.equals("HEX")){
+            return dato;
+        }else if(identificador.equals("DEC")){
+            int decimal=Integer.parseInt(dato,16);
+            return String.valueOf(decimal);
+        }else if(identificador.equals("OCT")){
+            return null;
+        }else if(identificador.equals("BIN")){
+            return null;
+        }else{
+            return null;
+        }
 
-        return null;
     }
 
-    public String getDecimal(String dato){
+    public String getDecimal(String dato, String identificador){
         //Codigo para convertir
         return null;
     }
 
-    public String getOctal(String dato){
+    public String getOctal(String dato,String identificador){
         //Codigo para convertir
         return null;
     }
 
-    public String getBinario(String dato){
+    public String getBinario(String dato,String identificador){
         //Codigo para convertir
         return null;
     }

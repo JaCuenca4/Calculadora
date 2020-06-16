@@ -16,8 +16,8 @@ public class PresentadorCalcuProgramador implements InterfacesCalcuProgramador.P
     }
 
     @Override
-    public void calcular(String dato) {
-        enviarResultados(model.calcular(dato));
+    public void calcular(String dato, String identificador) {
+        enviarResultados(model.calcular(dato, identificador));
     }
 
     @Override

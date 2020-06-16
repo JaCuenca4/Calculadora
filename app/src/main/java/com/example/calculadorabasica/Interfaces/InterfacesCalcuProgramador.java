@@ -10,11 +10,11 @@ public interface InterfacesCalcuProgramador {
     }
 
     interface Presenter{
-        void calcular(String dato);
+        void calcular(String dato, String identificador);
         void enviarResultados(List<String> resultados);
     }
 
     interface Model{
-        List<String> calcular(String dato);
+        List<String> calcular(String dato,String identificador);
     }
 }

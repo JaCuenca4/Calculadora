@@ -16,7 +16,7 @@ public class ModelCalcuProgramador implements InterfacesCalcuProgramador.Model {
     }
 
     @Override
-    public List<String> calcular(String dato) {
-        return convertidor.convertir(dato);
+    public List<String> calcular(String dato, String identificador) {
+        return convertidor.convertir(dato,identificador);
     }
 }

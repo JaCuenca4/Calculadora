@@ -52,6 +52,7 @@ public class CalcuProgramador extends AppCompatActivity implements View.OnClickL
     Button btnIgual;
     String dato = "";
 
+
     InterfacesCalcuProgramador.Presenter presenter;
 
     @Override
@@ -85,6 +86,7 @@ public class CalcuProgramador extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnHex:
+                dato="";
                 txtSelec.setText("HEX");
                 btnA.setEnabled(true);
                 btnB.setEnabled(true);
@@ -92,8 +94,19 @@ public class CalcuProgramador extends AppCompatActivity implements View.OnClickL
                 btnD.setEnabled(true);
                 btnE.setEnabled(true);
                 btnF.setEnabled(true);
+                btn1.setEnabled(true);
+                btn2.setEnabled(true);
+                btn3.setEnabled(true);
+                btn4.setEnabled(true);
+                btn5.setEnabled(true);
+                btn6.setEnabled(true);
+                btn7.setEnabled(true);
+                btn8.setEnabled(true);
+                btn9.setEnabled(true);
+                btn0.setEnabled(true);
                 break;
             case R.id.btnDec:
+                dato="";
                 txtSelec.setText("DEC");
                 btnA.setEnabled(false);
                 btnB.setEnabled(false);
@@ -101,8 +114,18 @@ public class CalcuProgramador extends AppCompatActivity implements View.OnClickL
                 btnD.setEnabled(false);
                 btnE.setEnabled(false);
                 btnF.setEnabled(false);
+                btn1.setEnabled(true);
+                btn2.setEnabled(true);
+                btn3.setEnabled(true);
+                btn4.setEnabled(true);
+                btn5.setEnabled(true);
+                btn6.setEnabled(true);
+                btn7.setEnabled(true);
+                btn8.setEnabled(true);
+                btn9.setEnabled(true);
                 break;
             case R.id.btnOct:
+                dato="";
                 txtSelec.setText("OCT");
                 btnA.setEnabled(false);
                 btnB.setEnabled(false);
@@ -112,8 +135,16 @@ public class CalcuProgramador extends AppCompatActivity implements View.OnClickL
                 btnF.setEnabled(false);
                 btn8.setEnabled(false);
                 btn9.setEnabled(false);
+                btn1.setEnabled(true);
+                btn2.setEnabled(true);
+                btn3.setEnabled(true);
+                btn4.setEnabled(true);
+                btn5.setEnabled(true);
+                btn6.setEnabled(true);
+                btn7.setEnabled(true);
                 break;
             case R.id.btnBin:
+                dato="";
                 txtSelec.setText("BIN");
                 btnA.setEnabled(false);
                 btnB.setEnabled(false);
@@ -121,6 +152,8 @@ public class CalcuProgramador extends AppCompatActivity implements View.OnClickL
                 btnD.setEnabled(false);
                 btnE.setEnabled(false);
                 btnF.setEnabled(false);
+                btn0.setEnabled(true);
+                btn1.setEnabled(true);
                 btn2.setEnabled(false);
                 btn3.setEnabled(false);
                 btn4.setEnabled(false);
@@ -157,7 +190,7 @@ public class CalcuProgramador extends AppCompatActivity implements View.OnClickL
                 }
                 break;
             case R.id.btnConvertir:
-                presenter.calcular(dato);
+                presenter.calcular(dato,txtSelec.getText().toString());
                 break;
             case R.id.btn0P:
                 dato += "0";
