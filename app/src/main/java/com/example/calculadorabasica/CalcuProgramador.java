@@ -78,6 +78,9 @@ public class CalcuProgramador extends AppCompatActivity implements View.OnClickL
                 return true;
             case R.id.itemProgramador:
                 return true;
+            case R.id.itemGraficadora:
+                startActivity(new Intent(this, Graficadora.class));
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

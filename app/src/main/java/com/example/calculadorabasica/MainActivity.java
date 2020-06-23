@@ -186,6 +186,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.itemProgramador:
                 startActivity(new Intent(this, CalcuProgramador.class));
                 return true;
+            case R.id.itemGraficadora:
+                startActivity(new Intent(this, Graficadora.class));
         }
         return super.onOptionsItemSelected(item);
     }

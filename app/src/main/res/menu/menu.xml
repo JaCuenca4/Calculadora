@@ -12,4 +12,10 @@
         android:title="Programador"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/itemGraficadora"
+        android:title="Graficadora"
+        app:showAsAction="never"
+        />
+
 </menu>
