@@ -7,7 +7,8 @@
     android:stretchColumns="*">
 
     <TableRow>
-        <TextView android:text="Graficadora"
+        <TextView
+            android:text="Graficadora"
             android:textSize="30dp"
             android:gravity="center"
             android:layout_span="2"
@@ -19,7 +20,8 @@
 
     <TableRow>
 
-        <com.github.mikephil.charting.charts.LineChart
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/grafica"
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:layout_span="2"

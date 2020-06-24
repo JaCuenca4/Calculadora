@@ -3,6 +3,8 @@ package com.example.calculadorabasica.Model;
 import com.example.calculadorabasica.Clases.Graficador;
 import com.example.calculadorabasica.Clases.Numero;
 import com.example.calculadorabasica.Interfaces.InterfacesGraficadora;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.List;
 
@@ -17,13 +19,13 @@ public class ModelGraficadora implements InterfacesGraficadora.Model {
     }
 
     @Override
-    public List<List<Numero>> calcularCoordenadas(String tipo) {
+    public LineGraphSeries<DataPoint> calcularCoordenadas(String tipo) {
         try{
             switch (tipo){
                 case "seno":
-                    return graficador.coordCos();
+                    return graficador.coordenadasSeno();
                 case "coseno":
-                    return  graficador.coordSeno();
+                    return  graficador.coordenadasCoseno();
             }
             return null;
         }catch (Exception ex){

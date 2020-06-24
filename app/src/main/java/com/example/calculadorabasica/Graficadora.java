@@ -14,6 +14,9 @@ import android.widget.Button;
 import com.example.calculadorabasica.Clases.Numero;
 import com.example.calculadorabasica.Interfaces.InterfacesGraficadora;
 import com.example.calculadorabasica.Presenter.PresenterGraficadora;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.List;
 
@@ -23,6 +26,7 @@ public class Graficadora extends AppCompatActivity implements InterfacesGraficad
     Button coseno;
 
     InterfacesGraficadora.Presenter presenter;
+    GraphView graph;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +63,11 @@ public class Graficadora extends AppCompatActivity implements InterfacesGraficad
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnSenGraf:
+                graph.removeAllSeries();
                 presenter.solicitarGrafica("seno");
                 break;
             case R.id.btnCosGraf:
+                graph.removeAllSeries();
                 presenter.solicitarGrafica("coseno");
                 break;
         }
@@ -73,11 +79,12 @@ public class Graficadora extends AppCompatActivity implements InterfacesGraficad
         coseno = findViewById(R.id.btnCosGraf);
         seno.setOnClickListener(this);
         coseno.setOnClickListener(this);
+        graph = findViewById(R.id.grafica);
     }
 
     @Override
-    public void mostrarGrafica(List<List<Numero>> coordenadas) {
-
+    public void mostrarGrafica(LineGraphSeries<DataPoint> coordenadas) {
+        graph.addSeries(coordenadas);
     }
 
 }

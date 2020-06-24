@@ -3,6 +3,8 @@ package com.example.calculadorabasica.Presenter;
 import com.example.calculadorabasica.Clases.Numero;
 import com.example.calculadorabasica.Interfaces.InterfacesGraficadora;
 import com.example.calculadorabasica.Model.ModelGraficadora;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.List;
 
@@ -22,7 +24,7 @@ public class PresenterGraficadora implements InterfacesGraficadora.Presenter {
     }
 
     @Override
-    public void enviarCoordenadas(List<List<Numero>> coordenadas) {
+    public void enviarCoordenadas(LineGraphSeries<DataPoint> coordenadas) {
         view.mostrarGrafica(coordenadas);
     }
 }
