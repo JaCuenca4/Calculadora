@@ -46,12 +46,21 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
      */
     public ModelMainActivity() {
     }
+
+    /**
+     * M restar float.
+     *
+     * @param numero1 the numero 1
+     * @param numero2 the numero 2
+     * @return the float
+     */
     public float mRestar(float numero1, float numero2) {
         return (numero1 - numero2);
     }
 
     /**
      * Función que retorna el resultado de la suma de dos numeros
+     *
      * @param numero1 es un int
      * @param numero2 es un int
      * @return un numero float
@@ -62,6 +71,7 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
 
     /**
      * Función que retorna el resultado de la multiplicación de dos numeros
+     *
      * @param numero1 es un int
      * @param numero2 es un int
      * @return un numero float
@@ -72,6 +82,7 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
 
     /**
      * Función que retorna el resultado de la división de dos numeros
+     *
      * @param numero1 es un int
      * @param numero2 es un int
      * @return un numero float
@@ -112,9 +123,12 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
         presenter.enviarResultado(String.valueOf(resultado.getNumero()));
         resultado = new Numero();
     }
+
     /**
      * Función que calcula el factorial
+     *
      * @param numero es un numero tipo double
+     * @return the double
      */
     public double mfactorial(double numero){
 
@@ -124,10 +138,13 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
             return numero * mfactorial(numero-1);
         }
     }
+
     /**
      * Función que calcula el exponencial
-     * @param numero es un numero entero
+     *
+     * @param numero    es un numero entero
      * @param exponente es un numero entero
+     * @return the int
      */
     public int mExponente(int numero, int exponente){
         int acumulador=1;
@@ -143,6 +160,14 @@ public class ModelMainActivity implements InterfacesMainActivity.Model {
         }
 
     }
+
+    /**
+     * Mresiduo double.
+     *
+     * @param num1 the num 1
+     * @param num2 the num 2
+     * @return the double
+     */
     public double mresiduo(double num1,double num2) {
         double residuo = num1%num2;
         if (residuo > 0 && num1 < 0) {

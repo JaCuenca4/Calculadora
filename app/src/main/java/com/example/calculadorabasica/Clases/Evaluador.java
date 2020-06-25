@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.lang.Math;
 
 
+/**
+ * The type Evaluador.
+ */
 public class Evaluador {
 
     private String numAux = "";
@@ -12,9 +15,18 @@ public class Evaluador {
     private String postfija2 = "";
     private Pila pila = new Pila();
 
+    /**
+     * Instantiates a new Evaluador.
+     */
     public Evaluador() {
     }
 
+    /**
+     * Evaluar funcion boolean.
+     *
+     * @param infija the infija
+     * @return the boolean
+     */
     public boolean EvaluarFuncion(String infija) {
         //Recorrer la cadena Infija
         try {
@@ -232,6 +244,12 @@ public class Evaluador {
         return 0;
     }
 
+    /**
+     * Comparar operadores.
+     *
+     * @param valor    the valor
+     * @param operador the operador
+     */
     public void compararOperadores(int valor, String operador) {
         if (pila.estaVacia()) {
             pila.agregarAlFinal(operador);
@@ -315,6 +333,13 @@ public class Evaluador {
         return 0;
     }
 
+    /**
+     * P double.
+     *
+     * @param x the x
+     * @param i the
+     * @return the double
+     */
     public double p(double x, int i) {
         double r = 1.0;
         for (int j = i; j > 0; j--) r *= x;
@@ -322,6 +347,12 @@ public class Evaluador {
     }
 
 
+    /**
+     * Raiz double.
+     *
+     * @param num the num
+     * @return the double
+     */
     public double raiz(double num){
         double x = 1.0;
         for (int i = 1; i < 10; i++) {
@@ -333,6 +364,13 @@ public class Evaluador {
     {                                            //solo puede ser llamada por funciones miembro no por el objeto.
         return ((x * (double)Math.PI) / 180);
     }
+
+    /**
+     * Coseno double.
+     *
+     * @param rad the rad
+     * @return the double
+     */
     public double coseno(double rad){
         double acum = 0.0f;
         rad = GradesToRadians(rad);
@@ -345,6 +383,12 @@ public class Evaluador {
         return acum;
     }
 
+    /**
+     * Seno double.
+     *
+     * @param rad the rad
+     * @return the double
+     */
     public double seno(double rad){
         double acum = 0.0f;
         rad = GradesToRadians(rad);
@@ -357,6 +401,12 @@ public class Evaluador {
         return acum;
     }
 
+    /**
+     * Factorial double.
+     *
+     * @param n the n
+     * @return the double
+     */
     public double Factorial(double n)
     {
         double prod = 1; //acumulador
@@ -367,6 +417,9 @@ public class Evaluador {
         return prod;
     }
 
+    /**
+     * Reset.
+     */
     public void reset() {
         pila = new Pila();
         numAux = "";
@@ -374,6 +427,11 @@ public class Evaluador {
         postfija.clear();
     }
 
+    /**
+     * Gets postfija.
+     *
+     * @return the postfija
+     */
     public ArrayList<String> getPostfija() {
         return postfija;
     }

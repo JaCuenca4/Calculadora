@@ -1,21 +1,42 @@
 package com.example.calculadorabasica.Clases;
 
+/**
+ * The type Pila.
+ */
 public class Pila {
 
     private Nodo p;
 
+    /**
+     * Instantiates a new Pila.
+     */
     public Pila(){
         p = null;
     }
 
+    /**
+     * Esta vacia boolean.
+     *
+     * @return the boolean
+     */
     public boolean estaVacia() {
         return p == null;
     }
 
+    /**
+     * Esta llena boolean.
+     *
+     * @return the boolean
+     */
     public boolean estaLlena(){
         return false == estaVacia();
     }
 
+    /**
+     * Agregar al final.
+     *
+     * @param dato the dato
+     */
     public void agregarAlFinal(Object dato) {
         Nodo nodo = new Nodo(dato);
         if (estaVacia()) {
@@ -29,6 +50,11 @@ public class Pila {
         i.setSig(nodo);
     }
 
+    /**
+     * Eliminar al final string.
+     *
+     * @return the string
+     */
     public String eliminarAlFinal() {
         if (estaVacia()) {
             return "Lista Vacia";
@@ -51,6 +77,12 @@ public class Pila {
         return resp;
     }
 
+    /**
+     * Buscar nodo string.
+     *
+     * @param Id the id
+     * @return the string
+     */
     public String buscarNodo(String Id) {
         Nodo temp = p;
         String resp;
@@ -70,6 +102,11 @@ public class Pila {
         return resp = "No exite el elemento en la lista";
     }
 
+    /**
+     * Numero de nodos int.
+     *
+     * @return the int
+     */
     public int numeroDeNodos() {
         int contNodo = 0;
         if (estaVacia()) {
@@ -85,6 +122,9 @@ public class Pila {
         }
     }
 
+    /**
+     * Remove al final.
+     */
     public void removeAlFinal(){
         if (estaVacia()) {
             return;
@@ -99,6 +139,9 @@ public class Pila {
         i.setSig(null);
     }
 
+    /**
+     * Remove ultimo elmt.
+     */
     public void removeUltimoElmt(){
         Nodo i = p;
         while (i.getSig() != null) {
@@ -112,6 +155,11 @@ public class Pila {
         }
     }
 
+    /**
+     * Get ultimo elemento string.
+     *
+     * @return the string
+     */
     public String getUltimoElemento(){
         Nodo i = p;
         String aux;
@@ -121,6 +169,11 @@ public class Pila {
         return i.getDato().toString();
     }
 
+    /**
+     * Cambiar ultimo.
+     *
+     * @param dato the dato
+     */
     public void cambiarUltimo(Object dato){
         Nodo i = p;
         while (i.getSig() != null) {
@@ -129,6 +182,11 @@ public class Pila {
         i.setDato(dato);
     }
 
+    /**
+     * Retirar ultimo.
+     *
+     * @param dato the dato
+     */
     public void retirarUltimo(Object dato){
         Nodo i = p;
         while (i.getSig() != null) {

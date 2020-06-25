@@ -20,12 +20,27 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.List;
 
+/**
+ * The type Graficadora.
+ */
 public class Graficadora extends AppCompatActivity implements InterfacesGraficadora.View, View.OnClickListener{
 
+    /**
+     * The Seno.
+     */
     Button seno;
+    /**
+     * The Coseno.
+     */
     Button coseno;
 
+    /**
+     * The Presenter.
+     */
     InterfacesGraficadora.Presenter presenter;
+    /**
+     * The Graph.
+     */
     GraphView graph;
 
     @Override

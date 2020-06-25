@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * The Txt memoria.
      */
     TextView txtMemoria;
+    /**
+     * The Txt operacion.
+     */
     TextView txtOperacion;
     /**
      * The Txt resultado.
@@ -64,6 +67,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     Button btnFact;
 
+    /**
+     * The Btn mod.
+     */
     Button btnMod;
     /**
      * The Btn parentesis a.
@@ -146,9 +152,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     Button btnDivision;
 
+    /**
+     * The Btn raiz.
+     */
     Button btnRaiz;
+    /**
+     * The Btn log.
+     */
     Button btnLog;
+    /**
+     * The Btn sen.
+     */
     Button btnSen;
+    /**
+     * The Btn cos.
+     */
     Button btnCos;
     /**
      * The Operacion.

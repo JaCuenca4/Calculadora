@@ -5,12 +5,26 @@ import com.example.calculadorabasica.Interfaces.InterfacesCalcuProgramador;
 
 import java.util.List;
 
+/**
+ * The type Model calcu programador.
+ */
 public class ModelCalcuProgramador implements InterfacesCalcuProgramador.Model {
 
+    /**
+     * The Convertidor.
+     */
     Conversion convertidor = new Conversion();
 
+    /**
+     * The Presenter.
+     */
     InterfacesCalcuProgramador.Presenter presenter;
 
+    /**
+     * Instantiates a new Model calcu programador.
+     *
+     * @param presenter the presenter
+     */
     public ModelCalcuProgramador(InterfacesCalcuProgramador.Presenter presenter){
         this.presenter = presenter;
     }

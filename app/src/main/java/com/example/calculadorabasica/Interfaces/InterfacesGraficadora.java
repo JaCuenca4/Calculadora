@@ -21,6 +21,4 @@ public interface InterfacesGraficadora {
     interface Model{
         LineGraphSeries<DataPoint> calcularCoordenadas(String funcion);
     }
-
-
 }

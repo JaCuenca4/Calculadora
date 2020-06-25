@@ -7,10 +7,21 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Graficador.
+ */
 public class Graficador {
 
+    /**
+     * Instantiates a new Graficador.
+     */
     public Graficador(){}
 
+    /**
+     * Coordenadas seno line graph series.
+     *
+     * @return the line graph series
+     */
     public LineGraphSeries<DataPoint> coordenadasSeno(){
         LineGraphSeries<DataPoint> coordenadas = new LineGraphSeries<>();
         double y,x;
@@ -23,6 +34,11 @@ public class Graficador {
         return  coordenadas;
     }
 
+    /**
+     * Coordenadas coseno line graph series.
+     *
+     * @return the line graph series
+     */
     public LineGraphSeries<DataPoint> coordenadasCoseno(){
         LineGraphSeries<DataPoint> coordenadas = new LineGraphSeries<>();
         double y,x;

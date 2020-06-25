@@ -8,11 +8,25 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.List;
 
-public class PresenterGraficadora implements InterfacesGraficadora.Presenter {
+/**
+ * The type Presenter graficadora.
+ */
+public class    PresenterGraficadora implements InterfacesGraficadora.Presenter {
 
+    /**
+     * The View.
+     */
     InterfacesGraficadora.View view;
+    /**
+     * The Model.
+     */
     InterfacesGraficadora.Model model;
 
+    /**
+     * Instantiates a new Presenter graficadora.
+     *
+     * @param view the view
+     */
     public PresenterGraficadora(InterfacesGraficadora.View view){
         this.view = view;
         this.model = new ModelGraficadora(this);

@@ -3,12 +3,25 @@ package com.example.calculadorabasica.Clases;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Conversion.
+ */
 public class Conversion {
 
+    /**
+     * Instantiates a new Conversion.
+     */
     public Conversion() {
 
     }
 
+    /**
+     * Convertir list.
+     *
+     * @param dato          the dato
+     * @param identificador the identificador
+     * @return the list
+     */
     public List<String> convertir(String dato, String identificador) {
         List<String> resultados = new ArrayList<>();
         String dato2 = convertDecimal(dato, identificador);
@@ -19,6 +32,13 @@ public class Conversion {
         return resultados;
     }
 
+    /**
+     * Convert decimal string.
+     *
+     * @param dato          the dato
+     * @param identificador the identificador
+     * @return the string
+     */
     public String convertDecimal(String dato, String identificador) {
         if (identificador.equals("HEX")) {
             Long decimal = Long.parseLong(dato, 16);
@@ -36,6 +56,12 @@ public class Conversion {
         }
     }
 
+    /**
+     * Gets hexa.
+     *
+     * @param dato the dato
+     * @return the hexa
+     */
     public String getHexa(String dato) {
         int dato2 = Integer.valueOf(dato);
         String hexadecimal = Integer.toHexString(dato2);
@@ -43,16 +69,34 @@ public class Conversion {
 
     }
 
+    /**
+     * Gets decimal.
+     *
+     * @param dato the dato
+     * @return the decimal
+     */
     public String getDecimal(String dato) {
         return "DEC " + dato;
     }
 
+    /**
+     * Gets octal.
+     *
+     * @param dato the dato
+     * @return the octal
+     */
     public String getOctal(String dato) {
         int dato2 = Integer.valueOf(dato);
         String octal = Integer.toOctalString(dato2);
         return "OCT " + octal;
     }
 
+    /**
+     * Gets binario.
+     *
+     * @param dato the dato
+     * @return the binario
+     */
     public String getBinario(String dato) {
         Long dato2 = Long.getLong(dato);
         String binario = Long.toBinaryString(dato2);

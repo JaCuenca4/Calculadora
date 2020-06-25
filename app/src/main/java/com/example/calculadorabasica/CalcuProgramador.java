@@ -19,40 +19,136 @@ import com.example.calculadorabasica.Presenter.PresenterMainActivity;
 
 import java.util.List;
 
+/**
+ * The type Calcu programador.
+ */
 public class CalcuProgramador extends AppCompatActivity implements View.OnClickListener, InterfacesCalcuProgramador.View {
 
+    /**
+     * The Txt selec.
+     */
     TextView txtSelec;
+    /**
+     * The Txt input.
+     */
     TextView txtInput;
+    /**
+     * The Txt hexa.
+     */
     TextView txtHexa;
+    /**
+     * The Txt dec.
+     */
     TextView txtDec;
+    /**
+     * The Txt oct.
+     */
     TextView txtOct;
+    /**
+     * The Txt bin.
+     */
     TextView txtBin;
+    /**
+     * The Btn hex.
+     */
     Button btnHex;
+    /**
+     * The Btn dec.
+     */
     Button btnDec;
+    /**
+     * The Btn oct.
+     */
     Button btnOct;
+    /**
+     * The Btn bin.
+     */
     Button btnBin;
+    /**
+     * The Btn a.
+     */
     Button btnA;
+    /**
+     * The Btn b.
+     */
     Button btnB;
+    /**
+     * The Btn c.
+     */
     Button btnC;
+    /**
+     * The Btn d.
+     */
     Button btnD;
+    /**
+     * The Btn e.
+     */
     Button btnE;
+    /**
+     * The Btn f.
+     */
     Button btnF;
+    /**
+     * The Btn cr.
+     */
     Button btnCR;
+    /**
+     * The Btn del.
+     */
     Button btnDel;
+    /**
+     * The Btn 0.
+     */
     Button btn0;
+    /**
+     * The Btn 1.
+     */
     Button btn1;
+    /**
+     * The Btn 2.
+     */
     Button btn2;
+    /**
+     * The Btn 3.
+     */
     Button btn3;
+    /**
+     * The Btn 4.
+     */
     Button btn4;
+    /**
+     * The Btn 5.
+     */
     Button btn5;
+    /**
+     * The Btn 6.
+     */
     Button btn6;
+    /**
+     * The Btn 7.
+     */
     Button btn7;
+    /**
+     * The Btn 8.
+     */
     Button btn8;
+    /**
+     * The Btn 9.
+     */
     Button btn9;
+    /**
+     * The Btn igual.
+     */
     Button btnIgual;
+    /**
+     * The Dato.
+     */
     String dato = "";
 
 
+    /**
+     * The Presenter.
+     */
     InterfacesCalcuProgramador.Presenter presenter;
 
     @Override
